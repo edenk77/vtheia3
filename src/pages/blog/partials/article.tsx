@@ -5,7 +5,6 @@ import Img4 from '@/img/persona/jakes.jpg'
 import Img5 from '@/img/persona/anne.jpg'
 
 
-
 const Article = () => {
     return (
         <div>

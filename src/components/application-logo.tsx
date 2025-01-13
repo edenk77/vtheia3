@@ -1,3 +1,4 @@
+// Commentaires : Ici se trouve le SVG du logo
 export default function ApplicationLogo({ }: { className?: string, fillColor?: string }) {
     return (
         <svg width="93" height="36" viewBox="0 0 93 76" fill="none" xmlns="http://www.w3.org/2000/svg">

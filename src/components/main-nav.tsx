@@ -6,14 +6,18 @@ import { Link } from "react-router-dom"
 //   items?: NavItem[]
 // }
 
+// Ici se trouve le main-menu en mode "backend" . Je crée les liens et leurs mises en formes avec Tailwind. Ils ont des spécifications générales. Mais ils vont être changer avec du CSS additionnel
+
 export function MainNav() {
   return (
     <div className="flex gap-6 md:gap-10 ">
+      {/*Commentaires: Le lien et la mise en forme de la première icône - et le logo */}
       <Link to="/home" className="flex items-center space-x-2">
         <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 me-3" alt="FlowBite Logo" />
         <span className="inline-block font-bold text-white">{siteConfig.name}</span>
       </Link>
 
+      {/* Commentaires : Ici se trouve le reste du menu et ses liens. J'ai utilisé les liens avec React Router DOM.  */}
       <nav className="flex gap-6">
         <Link
           to="/"

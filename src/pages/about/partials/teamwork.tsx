@@ -55,20 +55,15 @@ const people = [
 const Teamwork = () => {
     return (
         <div>
-            <Card className="p-12">
+            <Card className="p-12 border-none">
                 <CardHeader className='text-center'>
-                    <CardTitle className='text-5xl'>Nos marques alternatives</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
+                    <CardTitle className='text-5xl'>Rencontrez nos dirigeants</CardTitle>
+                    <CardDescription>Une équipe d'or pour vous aider à vivre une expérience au mieux.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <div className="bg-white py-24 sm:py-32">
                         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-                            <div className="max-w-2xl">
-                                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Rencontrez nos dirigeants</h2>
-                                <p className="mt-6 text-lg leading-8 text-gray-600">
-                                    Une équipe d'or pour vous aider à vivre une expérience au mieux.
-                                </p>
-                            </div>
+
                             <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
                                 {people.map((person) => (
                                     <li key={person.name}>

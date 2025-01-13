@@ -11,7 +11,6 @@ import Img2 from '@/img/coolblue_icon.png.png'
 import Img3 from '@/img/maxiaids_logo.png.png'
 import Img4 from '@/img/Group.png'
 
-
 const BrandSponsor = () => {
     return (
         <div>

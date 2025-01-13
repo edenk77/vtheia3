@@ -12,6 +12,7 @@ import Wishlist from "./pages/wishlist/wishlist"
 // import Teste from "./pages/teste/teste"
 import Login from "./pages/auth/login"
 import Register from "./pages/auth/register"
+import Quiz from "./pages/quiz/quiz"
 
 
 // const routes = [{ path: "/", element: <Home /> }]
@@ -31,6 +32,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="quiz" element={<Quiz />} />
         {/* <Route path="teste" element={<Teste />} /> */}
         {/* <Route path="/login" element={<Login />} /> */}
       </Routes>

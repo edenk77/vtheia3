@@ -16,7 +16,7 @@ export default function Categories() {
                 <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
                     <h2 className="text-2xl font-bold tracking-tight text-gray-900">Achats par catégories</h2>
                     <div className="flex justify-between">
-                        <p>Voyez ici les produits les plus demandées sur Voytheia</p>
+                        <p>Voyez ici les produits les plus demandées</p>
                         <Link to={""} className="flex italic text-blue-500">
                             Voir plus <IconArrowAutofitRight />
                         </Link>
@@ -43,7 +43,7 @@ export default function Categories() {
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">Noir</p>
                                 </div>
-                                <p className="text-sm font-medium text-gray-900">35€</p>
+                                <p className="text-sm text-gray-900 font-black">35€</p>
                             </div>
                         </div>
 
@@ -67,7 +67,7 @@ export default function Categories() {
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">Noir</p>
                                 </div>
-                                <p className="text-sm font-medium text-gray-900">27.70€</p>
+                                <p className="text-sm font-black text-gray-900">27.70€</p>
                             </div>
                         </div>
 
@@ -91,7 +91,7 @@ export default function Categories() {
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">Noir</p>
                                 </div>
-                                <p className="text-sm font-medium text-gray-900">55€</p>
+                                <p className="text-sm font-black text-gray-900">55€</p>
                             </div>
                         </div>
 
@@ -115,7 +115,7 @@ export default function Categories() {
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">Noir</p>
                                 </div>
-                                <p className="text-sm font-medium text-gray-900">123.99€</p>
+                                <p className="text-sm font-black text-gray-900">123.99€</p>
                             </div>
                         </div>
 

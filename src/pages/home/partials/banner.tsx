@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function Banner() {
     return (
+        // Commentaires : C'est ici que se tient la bannière et tout ce qui s'y tient. 
         <div className="mx-auto w-7xl px-0 py-0">
             <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 pb-16 shadow-2xl rounded-none xl:max-w-full sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
                 <svg viewBox="0 0 1024 1024" className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
@@ -26,12 +28,16 @@ export default function Banner() {
                     </div>
                     {/* BUTTON BANNER */}
                     <div className="mt-10 flex items-center justify-center gap-x-6 xl:max-w-full xl:justify-center lg:justify-center">
-                        <Button variant='blue'>
-                            Commencer le test
-                        </Button>
-                        <Button variant='blueoutline'>
-                            En savoir plus<span aria-hidden="true">→</span>
-                        </Button>
+                        <Link to={"/Quiz"} className="flex items-center">
+                            <Button variant='blue'>
+                                Commencer le test
+                            </Button>
+                        </Link>
+                        <Link to={"/"} className="flex items-center">
+                            <Button variant='blueoutline'>
+                                En savoir plus<span aria-hidden="true">→</span>
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

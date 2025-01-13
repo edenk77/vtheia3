@@ -11,6 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
     return (
         <>
             <div className="relative flex min-h-screen flex-col">
+                {/* Commentaires : Ici se trouve le layout de la mise en page. Le header, le contenu et le footer */}
                 <SiteHeader />
                 <div className="flex-1">{children}</div>
                 <Footer />

@@ -507,8 +507,8 @@ const CatalogueAll = () => {
                 ))}
 
                 {/* Menu sur le coté non responsive */}
-                <aside id="sidebar-multi-level-sidebar" className="top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 md:hidden sm:hidden hidden  lg:block xl:block" aria-label="Sidebar">
-                    <div className="h-full px-3  overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                <aside id="sidebar-multi-level-sidebar" className="top-0 left-0 z-40 w-64 transition-transform -translate-x-full sm:translate-x-0 md:hidden sm:hidden hidden lg:block xl:block overflow-y-scroll" aria-label="Sidebar">
+                    <div className="h-full px-3 mb-5 overflow-y-auto bg-gray-50 dark:bg-gray-800">
                         <ul className=" font-medium">
                             {/* CATEGORIES */}
                             <li>
@@ -666,7 +666,7 @@ const CatalogueAll = () => {
                     </div>
                 </div> */}
                 <CartProvider>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col h-auto overflow-y-scroll'>
                         <Panier />
                         <Collection />
                     </div>

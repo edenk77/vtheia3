@@ -3,7 +3,8 @@ import ApplicationLogo from "./application-logo";
 
 export function Footer() {
     return (
-        <footer className="bg-black dark:bg-gray-900 ">
+        // Commentaires : Ici se trouve le footer complet
+        <footer className="bg-black dark:bg-gray-900 text-white ">
             <div className="mx-auto w-full p-4 py-6 lg:py-8 ">
                 <div className="md:flex md:justify-between p-6">
                     <div className="mb-6 md:mb-0">
@@ -14,8 +15,8 @@ export function Footer() {
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase dark:text-white">ResSources</h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                            <h2 className="mb-6 text-sm font-black uppercase">ResSources</h2>
+                            <ul className="  font-medium">
                                 <li className="mb-4">
                                     <Link to={"/Contact"} className="hover:underline">WCAG Documentation</Link>
                                 </li>
@@ -25,8 +26,8 @@ export function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase dark:text-white">Suivez-nous</h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                            <h2 className="mb-6 text-sm font-black uppercase dark:text-white">Suivez-nous</h2>
+                            <ul className=" font-medium">
                                 <li className="mb-4">
                                     <Link to={"/Contact"} className="hover:underline ">Github</Link>
                                 </li>
@@ -36,8 +37,8 @@ export function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase dark:text-white">Legal</h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                            <h2 className="mb-6 text-sm font-black uppercase">Legal</h2>
+                            <ul className="font-medium">
                                 <li className="mb-4">
                                     <a href="#" className="hover:underline">Privacy Policy</a>
                                 </li>
@@ -49,6 +50,7 @@ export function Footer() {
                     </div>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                {/* Commentaires : Chaque icône de réseau social a son SVG */}
                 <div className="sm:flex sm:items-center sm:justify-between mx-6">
                     <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" className="hover:underline">Voytheia™</a>. All Rights Reserved.
                     </span>

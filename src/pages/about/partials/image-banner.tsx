@@ -11,7 +11,7 @@ const ImageBanner = () => {
         <div className='p-8'>
             <Card className='h-96 p-0'>
                 <CardContent className='p-0'>
-                    <ImageLoader src={Img1} alt="Two each of gray, white, and black shirts laying flat." imageStyleClass="h-96 w-full object-cover object-center" preview={''} />
+                    <ImageLoader src={Img1} alt="Groupe d'ami qui se tiennent main dans la main" imageStyleClass="h-96 w-full object-cover object-center rounded" preview={''} />
                 </CardContent>
             </Card>
         </div>
