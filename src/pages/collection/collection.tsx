@@ -14,8 +14,6 @@ import image10 from "@/img/data/montres/montrehomme/montre-parlante-homme-bayard
 import image11 from "@/img/data/smartphones/apple/iphone11promax/iphone11promax.jpeg"
 import image12 from "@/img/data/tablettes/ordissimo/tablette-simplifiee-ordissimo1.jpeg"
 import image13 from "@/img/data/telephonepoursenior/cl8000/cl8000-face-1.jpeg"
-// import { useCart } from '../store/cart-context'
-// import { Button } from '@/components/ui/button'
 import {
     Card,
     CardContent,
@@ -24,15 +22,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTrigger,
-} from "@/components/ui/dialog"
-import Quickview from '../collection/partials/quickview'
-import { Button } from '@/components/ui/button'
+
 
 interface Product {
     id: number;
