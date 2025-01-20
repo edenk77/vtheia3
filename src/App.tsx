@@ -13,6 +13,7 @@ import Wishlist from "./pages/wishlist/wishlist"
 import Login from "./pages/auth/login"
 import Register from "./pages/auth/register"
 import Quiz from "./pages/quiz/quiz"
+import { CartItemType } from "./pages/catalogue/partials/catalogue-all"
 
 
 // const routes = [{ path: "/", element: <Home /> }]
@@ -25,7 +26,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="catalogue" element={<Catalogue />} />
         <Route path="catalogue-detail" element={<CatalogueDetail />} />
-        <Route path="panier" element={<Panier />} />
+        <Route path="panier" element={<Panier cartItems={[]} addToCart={function (): void {
+          throw new Error("Function not implemented.")
+        }} removeFromCart={function (): void {
+          throw new Error("Function not implemented.")
+        }} />} />
         <Route path="wishlist" element={<Wishlist />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
@@ -33,8 +38,6 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="quiz" element={<Quiz />} />
-        {/* <Route path="teste" element={<Teste />} /> */}
-        {/* <Route path="/login" element={<Login />} /> */}
       </Routes>
 
       <TailwindIndicator />
