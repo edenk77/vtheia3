@@ -1,9 +1,9 @@
-function Teste() {
-    const data = "Hello from parent";
+// function Teste() {
+//     const data = "Hello from parent";
 
-    return (
-        <Teste message={data} />
-    );
-}
+//     return (
+//         <Teste message={data} />
+//     );
+// }
 
-export default Teste
+// export default Teste
