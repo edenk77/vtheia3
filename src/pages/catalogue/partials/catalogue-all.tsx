@@ -492,6 +492,8 @@ const couleurs = [
 ]
 
 
+
+
 //Const attribué pour le menu de droite
 const SHEET_SIDES = ["left"] as const
 type SheetSide = (typeof SHEET_SIDES)[number]
@@ -680,7 +682,6 @@ const CatalogueAll = () => {
 
     //Handle
     const handleAddToCart = (item: CartItemType) => {
-        //console.log(clickedItem);
         setCartItems((prev) => {
             const isItemInCart = prev.find((cartItem) => cartItem.id === item.id);
 
@@ -756,7 +757,7 @@ const CatalogueAll = () => {
                                                     <div key={categorie.id} className='flex items-center space-x-2 mb-2'>
                                                         <Checkbox id={categorie.name} />
                                                         <label
-                                                            ref={categorie.href}
+                                                            ref={categorie.ref}
                                                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                                                         >
                                                             {categorie.title}
@@ -818,7 +819,7 @@ const CatalogueAll = () => {
                                                     <div key={marque.id} className='flex items-center space-x-2 mb-2'>
                                                         <Checkbox id={marque.name} />
                                                         <label
-                                                            ref={marque.href}
+                                                            ref={marque.ref}
                                                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                                                         >
                                                             {marque.title}
@@ -838,7 +839,7 @@ const CatalogueAll = () => {
                                                     <div key={couleur.id} className='flex items-center space-x-2 mb-2'>
                                                         <Checkbox id={couleur.name} />
                                                         <label
-                                                            ref={couleur.href}
+                                                            ref={couleur.ref}
                                                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                                                         >
                                                             {couleur.title}
@@ -872,7 +873,7 @@ const CatalogueAll = () => {
                                                     <div key={categorie.id} className='flex items-center space-x-2 mb-2'>
                                                         <Checkbox id={categorie.name} />
                                                         <label
-                                                            ref={categorie.href}
+                                                            ref={categorie.ref}
                                                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                                                         >
                                                             {categorie.title}
@@ -940,7 +941,7 @@ const CatalogueAll = () => {
                                                     <div key={marque.id} className='flex items-center space-x-2 mb-2'>
                                                         <Checkbox id={marque.name} />
                                                         <label
-                                                            ref={marque.href}
+                                                            ref={marque.ref}
                                                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                                                         >
                                                             {marque.title}
@@ -963,7 +964,7 @@ const CatalogueAll = () => {
                                                     <div key={couleur.id} className='flex items-center space-x-2 mb-2'>
                                                         <Checkbox id={couleur.name} />
                                                         <label
-                                                            ref={couleur.href}
+                                                            ref={couleur.ref}
                                                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                                                         >
                                                             {couleur.title}

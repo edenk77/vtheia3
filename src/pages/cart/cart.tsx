@@ -1,12 +1,4 @@
 import React from 'react'
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
 import { CartItemType } from '../catalogue/partials/catalogue-all';
 import CartItem from '../cartitem/cartitem';
 import image1 from "@/img/data/braille/braillesense6/braillesense_6_vue.jpg"
@@ -22,7 +14,7 @@ import image10 from "@/img/data/montres/montrehomme/montre-parlante-homme-bayard
 import image11 from "@/img/data/smartphones/apple/iphone11promax/iphone11promax.jpeg"
 import image12 from "@/img/data/tablettes/ordissimo/tablette-simplifiee-ordissimo1.jpeg"
 import image13 from "@/img/data/telephonepoursenior/cl8000/cl8000-face-1.jpeg"
-import item from '../item/item';
+
 
 
 type Props = {
