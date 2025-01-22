@@ -14,6 +14,7 @@ import { CartItemType } from "../catalogue/partials/catalogue-all"
 import CartItem from "../cartitem/cartitem"
 
 
+
 type Props = {
     cartItems: CartItemType[];
     addToCart: (clickedItem: CartItemType) => void;
@@ -28,41 +29,43 @@ const Panier: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
     return (
         <>
             {/* Commentaire : C'est ici que je stocke tout mes produits de panier */}
-            <Sheet>
-                <SheetTrigger asChild>
-                    <Button variant="outline">Valider mon panier</Button>
-                </SheetTrigger>
-                <SheetContent>
-                    <SheetHeader>
-                        <SheetTitle>Votre panier</SheetTitle>
-                        <SheetDescription>
-                            Make changes to your profile here. Click save when you're done.
-                        </SheetDescription>
-                    </SheetHeader>
-                    <div className="p-6">
-                        {cartItems.length ? (
-                            <div>
-                                {cartItems.map((item) => (
-                                    <CartItem
-                                        key={item.id}
-                                        item={item}
-                                        addToCart={addToCart}
-                                        removeFromCart={removeFromCart}
-                                    />
-                                ))}
-                            </div>
-                        ) : (
-                            <div>No items in cart</div>
-                        )}
-                        <h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
-                    </div>
-                    <SheetFooter>
-                        <SheetClose asChild>
-                            <Button type="submit">Payer</Button>
-                        </SheetClose>
-                    </SheetFooter>
-                </SheetContent>
-            </Sheet>
+            <div className="pb-6">
+                <Sheet>
+                    <SheetTrigger asChild className="p-6">
+                        <Button variant="outline">Valider mon panier</Button>
+                    </SheetTrigger>
+                    <SheetContent className="overflow-auto">
+                        <SheetHeader>
+                            <SheetTitle>Votre panier</SheetTitle>
+                            <SheetDescription>
+                                Nous vous faisons un récapitulatif de ce que vous avez sélectionné.
+                            </SheetDescription>
+                        </SheetHeader>
+                        <div className="p-6">
+                            {cartItems.length ? (
+                                <div className="">
+                                    {cartItems.map((item) => (
+                                        <CartItem
+                                            key={item.id}
+                                            item={item}
+                                            addToCart={addToCart}
+                                            removeFromCart={removeFromCart}
+                                        />
+                                    ))}
+                                </div>
+                            ) : (
+                                <div>Votre panier est vide pour l'instant. Remplissez le comme bon vous semble.</div>
+                            )}
+                            <h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
+                        </div>
+                        <SheetFooter>
+                            <SheetClose asChild>
+                                <Button type="submit">Payer</Button>
+                            </SheetClose>
+                        </SheetFooter>
+                    </SheetContent>
+                </Sheet>
+            </div>
         </>
     )
 }

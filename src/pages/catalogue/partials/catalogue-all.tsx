@@ -37,9 +37,21 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
 
 
 
+
+
+
+
+// Declaration des Propriétés - un produit est un item et je vais l'ajouter
 type Props = {
     item: CartItemType;
     handleAddToCart: (clickedItem: CartItemType) => void;
@@ -51,7 +63,7 @@ export type CartItemType = {
     id: number;
     name: string;
     description: string;
-    href: string;
+    hhtmlFor: string;
     category: string;
     imageSrc: string;
     imageAlt: string;
@@ -69,427 +81,157 @@ const products: CartItemType[] = [
         id: 1,
         name: 'Braille Sense 6',
         description: 'Évalué par nos consommateurs, bloc-notes braille',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image1,
         imageAlt: "Braille Sense 6",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'ordinateur'
     },
     {
         id: 2,
         name: 'Clover 2',
         description: 'Full HD, image crystal',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image2,
         imageAlt: "Clover 2",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'loupeelectronique'
     },
     {
         id: 3,
         name: 'Loupe de lecture',
         description: 'Loupe grossissante, x10, souple',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image3,
         imageAlt: "Loupe de lecture",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'lunettesloupe'
     }, {
         id: 4,
         name: 'Montre Parlante',
         description: 'Montre pour aveugle',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image4,
         imageAlt: "Montre Parlante",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'montres'
     }, {
         id: 5,
         name: 'Ordissimo 1',
         description: 'Ordinateur pour Seniors',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image5,
         imageAlt: "Ordissimo 1",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'ordinateur'
     },
     {
         id: 6,
         name: 'Galaxy Ultra S21',
         description: 'Recommandé WCAG, Accesibilité',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image6,
         imageAlt: "Galaxy Ultra S21.",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'telephones'
     },
     {
         id: 7,
         name: 'Facilo Tab',
         description: 'Tablette pour Senior, Utilisation simplifiée',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image7,
         imageAlt: "Facilo Tab",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'tablettes'
     },
     {
         id: 8,
         name: 'Loupe Amelie',
         description: 'DMLA ou cataracte, agrandissement, lecture simplifiée',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image8,
         imageAlt: "Loupe Amelie",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'lunettesloupe'
     },
     {
         id: 9,
         name: 'Loupe Macrolux',
         description: 'LED SMD, 3.6x loupe éclairée',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image9,
         imageAlt: "Loupe Macrolux",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'loupeelectronique'
     },
     {
         id: 10,
         name: 'Montre Bayard',
         description: 'Montre Quartz',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image10,
         imageAlt: "Montre Bayard",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'montre'
     },
     {
         id: 11,
         name: 'Iphone 11',
         description: 'Écran Liquid Retina, LCD, Accessibilité',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image11,
         imageAlt: "Iphone 11",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'smartphones'
     },
     {
         id: 12,
         name: 'Tablette Ordissimo',
         description: 'Tablette simplifiée, Senior',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image12,
         imageAlt: "Tablette Ordissimo",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'tablettes'
     },
     {
         id: 13,
         name: 'Cl8000',
         description: 'Téléphone fixe, Bouton SOS',
-        href: '#',
+        hhtmlFor: '#',
         imageSrc: image13,
         imageAlt: "Cl8000",
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: ''
+        category: 'telephonessenior'
     },
 ];
-
-
-//Liste des catégories, data, marques et couleurs pour le filtres
-const categories = [
-    {
-        id: 1,
-        name: 'accessoires',
-        title: 'Accessoires',
-        ref: 'accesoires',
-    },
-    {
-        id: 2,
-        name: 'braille',
-        title: 'Braille',
-        ref: 'braille',
-    },
-    {
-        id: 3,
-        name: 'loupeelectronique',
-        title: 'Loupe Eléctronique',
-        ref: 'loupeelectronique',
-    },
-    {
-        id: 4,
-        name: 'lunettesloupes',
-        title: 'Lunettes Loupe',
-        ref: 'lunettesloupes',
-    },
-    {
-        id: 5,
-        name: 'montres',
-        title: 'Montres',
-        ref: 'montres',
-    },
-    {
-        id: 6,
-        name: 'ordinateur',
-        title: 'Ordinateur',
-        ref: 'ordinateur',
-    },
-    {
-        id: 7,
-        name: 'smartphones',
-        title: 'Smartphones',
-        ref: 'smartphones',
-    },
-    {
-        id: 8,
-        name: 'tablettes',
-        title: 'Tablettes',
-        ref: 'tablettes',
-    },
-    {
-        id: 9,
-        name: 'telephonesenior',
-        title: 'Téléphones Senior',
-        ref: 'telephonesenior',
-    },
-    {
-        id: 10,
-        name: 'tout',
-        title: 'Tout',
-        ref: 'tout',
-    },
-]
-
-const data = [
-    {
-        goal: 200,
-    },
-    {
-        goal: 300,
-    },
-    {
-        goal: 400,
-    },
-    {
-        goal: 500,
-    },
-    {
-        goal: 600,
-    },
-    {
-        goal: 700,
-    },
-    {
-        goal: 800,
-    },
-    {
-        goal: 900,
-    },
-    {
-        goal: 1000,
-    },
-    {
-        goal: 1100,
-    },
-    {
-        goal: 1200,
-    },
-    {
-        goal: 1300,
-    },
-    {
-        goal: 1400,
-    },
-]
-
-const marques = [
-    {
-        id: 1,
-        name: 'braillesense',
-        title: 'Braille Sense',
-        ref: 'braillesense',
-    },
-    {
-        id: 2,
-        name: 'clover3',
-        title: 'Clover 3',
-        ref: 'clover3',
-    },
-    {
-        id: 3,
-        name: 'amelie',
-        title: 'Amelie Loupe',
-        ref: 'amelie',
-    },
-    {
-        id: 4,
-        name: 'moni',
-        title: 'Moni Loupe',
-        ref: 'moni',
-    },
-    {
-        id: 5,
-        name: 'reveal16',
-        title: 'Reveal 16',
-        ref: 'reveal16',
-    },
-    {
-        id: 6,
-        name: 'explor',
-        title: 'ExploR',
-        ref: 'explor',
-    },
-    {
-        id: 7,
-        name: 'ordissimo',
-        title: 'Ordissimo',
-        ref: 'ordissimo',
-    },
-    {
-        id: 8,
-        name: 'apple',
-        title: 'Apple',
-        ref: 'apple',
-    },
-    {
-        id: 9,
-        name: 'android',
-        title: 'Android',
-        ref: 'android',
-    },
-    {
-        id: 10,
-        name: 'android',
-        title: 'Android',
-        ref: 'android',
-    },
-    {
-        id: 11,
-        name: 'facitalab',
-        title: 'FacitaLab',
-        ref: 'facitalab',
-    },
-    {
-        id: 12,
-        name: 'pixstar',
-        title: 'PixStar',
-        ref: 'pixstar',
-    },
-    {
-        id: 13,
-        name: 'cl8000',
-        title: 'CL8000',
-        ref: 'cl8000',
-    },
-    {
-        id: 14,
-        name: 'cl7000',
-        title: 'CL8700',
-        ref: 'cl8700',
-    },
-    {
-        id: 15,
-        name: 'cl7000',
-        title: 'CL8700',
-        ref: 'cl8700',
-    },
-    {
-        id: 16,
-        name: 'geemarc',
-        title: 'GeeMarc',
-        ref: 'geemarc',
-    },
-    {
-        id: 17,
-        name: 'konrow',
-        title: 'KonRow',
-        ref: 'konrow',
-    },
-    {
-        id: 18,
-        name: 'smartvision',
-        title: 'Smartvision',
-        ref: 'smartvision',
-    },
-
-]
-
-const couleurs = [
-    {
-        id: 1,
-        name: 'rouge',
-        title: 'Rouge',
-        ref: 'rouge',
-    },
-    {
-        id: 2,
-        name: 'bleu',
-        title: 'Bleu',
-        ref: 'bleu',
-    },
-    {
-        id: 3,
-        name: 'noir',
-        title: 'Noir',
-        ref: 'noir',
-    },
-    {
-        id: 4,
-        name: 'jaune',
-        title: 'Jaune',
-        ref: 'jaune',
-    },
-    {
-        id: 5,
-        name: 'vert',
-        title: 'Vert',
-        ref: 'vert',
-    },
-    {
-        id: 6,
-        name: 'orange',
-        title: 'Orange',
-        ref: 'orange',
-    },
-    {
-        id: 7,
-        name: 'rose',
-        title: 'Rose',
-        ref: 'rose',
-    },
-    {
-        id: 8,
-        name: 'blanc',
-        title: 'Blanc',
-        ref: 'blanc',
-    }
-]
 
 
 
@@ -499,26 +241,27 @@ const SHEET_SIDES = ["left"] as const
 type SheetSide = (typeof SHEET_SIDES)[number]
 
 
-
-
-
 const CatalogueAll = () => {
 
     //Declaration des filtres
     const [goal, setGoal] = React.useState(350)
+
 
     function onClick(adjustment: number) {
         setGoal(Math.max(200, Math.min(400, goal + adjustment)))
     }
 
 
+
+
+    //Je lie mes produits avec CartItemType
     const getProducts = async (): Promise<CartItemType[]> => {
         return [
             {
                 id: 1,
                 name: 'Braille Sense 6',
                 description: 'Évalué par nos consommateurs, bloc-notes braille',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image1,
                 imageAlt: "Braille Sense 6",
                 price: 47.00,
@@ -530,7 +273,7 @@ const CatalogueAll = () => {
                 id: 2,
                 name: 'Clover 2',
                 description: 'Full HD, image crystal',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image2,
                 imageAlt: "Clover 2",
                 price: 94.00,
@@ -542,7 +285,7 @@ const CatalogueAll = () => {
                 id: 3,
                 name: 'Loupe de lecture',
                 description: 'Loupe grossissante, x10, souple',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image3,
                 imageAlt: "Loupe de lecture",
                 price: 24.99,
@@ -553,7 +296,7 @@ const CatalogueAll = () => {
                 id: 4,
                 name: 'Montre Parlante',
                 description: 'Montre pour aveugle',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image4,
                 imageAlt: "Montre Parlante",
                 price: 24.99,
@@ -564,7 +307,7 @@ const CatalogueAll = () => {
                 id: 5,
                 name: 'Ordissimo 1',
                 description: 'Ordinateur pour Seniors',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image5,
                 imageAlt: "Ordissimo 1",
                 price: 24.99,
@@ -576,7 +319,7 @@ const CatalogueAll = () => {
                 id: 6,
                 name: 'Galaxy Ultra S21',
                 description: 'Recommandé WCAG, Accesibilité',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image6,
                 imageAlt: "Galaxy Ultra S21.",
                 price: 24.99,
@@ -588,7 +331,7 @@ const CatalogueAll = () => {
                 id: 7,
                 name: 'Facilo Tab',
                 description: 'Tablette pour Senior, Utilisation simplifiée',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image7,
                 imageAlt: "Facilo Tab",
                 price: 24.99,
@@ -600,7 +343,7 @@ const CatalogueAll = () => {
                 id: 8,
                 name: 'Loupe Amelie',
                 description: 'DMLA ou cataracte, agrandissement, lecture simplifiée',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image8,
                 imageAlt: "Loupe Amelie",
                 price: 24.99,
@@ -612,7 +355,7 @@ const CatalogueAll = () => {
                 id: 9,
                 name: 'Loupe Macrolux',
                 description: 'LED SMD, 3.6x loupe éclairée',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image9,
                 imageAlt: "Loupe Macrolux",
                 price: 24.99,
@@ -624,7 +367,7 @@ const CatalogueAll = () => {
                 id: 10,
                 name: 'Montre Bayard',
                 description: 'Montre Quartz',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image10,
                 imageAlt: "Montre Bayard",
                 price: 24.99,
@@ -636,7 +379,7 @@ const CatalogueAll = () => {
                 id: 11,
                 name: 'Iphone 11',
                 description: 'Écran Liquid Retina, LCD, Accessibilité',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image11,
                 imageAlt: "Iphone 11",
                 price: 24.99,
@@ -648,7 +391,7 @@ const CatalogueAll = () => {
                 id: 12,
                 name: 'Tablette Ordissimo',
                 description: 'Tablette simplifiée, Senior',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image12,
                 imageAlt: "Tablette Ordissimo",
                 price: 24.99,
@@ -660,7 +403,7 @@ const CatalogueAll = () => {
                 id: 13,
                 name: 'Cl8000',
                 description: 'Téléphone fixe, Bouton SOS',
-                href: '#',
+                hhtmlFor: '#',
                 imageSrc: image13,
                 imageAlt: "Cl8000",
                 price: 24.99,
@@ -671,6 +414,8 @@ const CatalogueAll = () => {
         ];
     }
 
+
+
     //Declaration pour l'ajout des produits dans le panier 
     const [cartOpen, setCartOpen] = useState(false);
     const [cartItems, setCartItems] = useState([] as CartItemType[]);
@@ -680,7 +425,7 @@ const CatalogueAll = () => {
         items.reduce((acc, item) => acc + item.amount, 0);
 
 
-    //Handle
+    //Je crée la fonction pour l'ajout, avec le calcul 
     const handleAddToCart = (item: CartItemType) => {
         setCartItems((prev) => {
             const isItemInCart = prev.find((cartItem) => cartItem.id === item.id);
@@ -696,6 +441,7 @@ const CatalogueAll = () => {
         });
     };
 
+    //Je crée la fonction pour enlever un produit, avec le calcul 
     const handleRemoveFromCart = (id: number) => {
         setCartItems((prev) =>
             prev.reduce((acc, cartItem) => {
@@ -710,10 +456,13 @@ const CatalogueAll = () => {
     };
 
 
-    //Je declare le composant Item
+
+
+
+    //Je declare le composant Item et je. lui donne une forme
     const Item: React.FC<{ item: CartItemType }> = ({ item }) => (
         <div>
-            <Card>
+            <Card className='h-full'>
                 <CardHeader>
                     <CardTitle>{item.name}</CardTitle>
                     <CardDescription>{item.description}</CardDescription>
@@ -723,7 +472,7 @@ const CatalogueAll = () => {
                     <p>{item.price} €</p>
                 </CardContent>
                 <CardFooter>
-                    <button onClick={() => handleAddToCart(item)}>Ajouter au panier</button>
+                    <Button onClick={() => handleAddToCart(item)}>Ajouter au panier</Button>
                 </CardFooter>
             </Card>
         </div>
@@ -731,258 +480,24 @@ const CatalogueAll = () => {
 
 
 
+    //Etat pour stocker les noms des categories
+    const [selectedNames, setSelectedNames] = useState<string[]>([]);
+    //Fonction pour ajouter ou enlever des noms dans la listes des checkbox
+    const handleNameSelection = (name: string, isChecked: boolean) => {
+        setSelectedNames((prev) =>
+            isChecked ? [...prev, name] : prev.filter((item) => item !== name)
+        );
+    };
+    //J'applique un filtre sur les produits affichés en fonction de ce que je selctionne
+    const filteredProducts = selectedNames.length
+        ? products.filter((product) => selectedNames.includes(product.name))
+        : products;
+
+
+
     return (
-        <div>
-            <div className='flex'>
-                {/* SIDEBAR - responsive */}
-                {SHEET_SIDES.map((side) => (
-                    <Sheet key={side}>
-                        <SheetTrigger asChild className="xl:hidden lg:hidden">
-                            <div className='p-6'>
-                                <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-                                    {side}
-                                </svg>
-                            </div>
-                        </SheetTrigger>
-                        <SheetContent side={side} className="w-full">
-                            <SheetHeader className="pt-10">
-                                {/* CATEGORIES */}
-                                <div className=''>
-                                    <Accordion type="single" collapsible>
-                                        <AccordionItem value="item-1">
-                                            <AccordionTrigger>Catégories</AccordionTrigger>
-                                            <AccordionContent className=''>
-                                                {categories.map((categorie) => (
-                                                    <div key={categorie.id} className='flex items-center space-x-2 mb-2'>
-                                                        <Checkbox id={categorie.name} />
-                                                        <label
-                                                            ref={categorie.ref}
-                                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                                        >
-                                                            {categorie.title}
-                                                        </label>
-                                                    </div>
-
-                                                ))}
-                                            </AccordionContent>
-                                        </AccordionItem>
-                                    </Accordion>
-                                </div>
-                                <div className=''>
-                                    <Accordion type="single" collapsible>
-                                        <AccordionItem value="item-1">
-                                            <AccordionTrigger>Prix</AccordionTrigger>
-                                            <AccordionContent className='text-center'>
-                                                <div className='flex items-center space-x-2'>
-                                                    <div className="flex items-center justify-center space-x-2 mx-auto">
-                                                        <Button
-                                                            variant="outline"
-                                                            size="icon"
-                                                            className="h-8 w-8 shrink-0 rounded-full"
-                                                            onClick={() => onClick(-10)}
-                                                            disabled={goal <= 200}
-                                                        >
-                                                            <MinusIcon className="h-4 w-4" />
-                                                            <span className="sr-only">Decrease</span>
-                                                        </Button>
-                                                        <div className="flex-1 text-center">
-                                                            <div className="text-xl font-bold tracking-tighter">
-                                                                {goal}
-                                                            </div>
-                                                            <div className="text-[0.70rem] uppercase text-muted-foreground">
-                                                                Prix
-                                                            </div>
-                                                        </div>
-                                                        <Button
-                                                            variant="outline"
-                                                            size="icon"
-                                                            className="h-8 w-8 shrink-0 rounded-full"
-                                                            onClick={() => onClick(10)}
-                                                            disabled={goal >= 400}
-                                                        >
-                                                            <PlusIcon className="h-4 w-4" />
-                                                            <span className="sr-only">Increase</span>
-                                                        </Button>
-                                                    </div>
-                                                </div>
-                                            </AccordionContent>
-                                        </AccordionItem>
-                                    </Accordion>
-                                </div>
-                                <div className=''>
-                                    <Accordion type="single" collapsible>
-                                        <AccordionItem value="item-1">
-                                            <AccordionTrigger>Marques</AccordionTrigger>
-                                            <AccordionContent>
-                                                {marques.map((marque) => (
-                                                    <div key={marque.id} className='flex items-center space-x-2 mb-2'>
-                                                        <Checkbox id={marque.name} />
-                                                        <label
-                                                            ref={marque.ref}
-                                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                                        >
-                                                            {marque.title}
-                                                        </label>
-                                                    </div>
-                                                ))}
-                                            </AccordionContent>
-                                        </AccordionItem>
-                                    </Accordion>
-                                </div>
-                                <div className=''>
-                                    <Accordion type="single" collapsible>
-                                        <AccordionItem value="item-1">
-                                            <AccordionTrigger>Couleurs</AccordionTrigger>
-                                            <AccordionContent>
-                                                {couleurs.map((couleur) => (
-                                                    <div key={couleur.id} className='flex items-center space-x-2 mb-2'>
-                                                        <Checkbox id={couleur.name} />
-                                                        <label
-                                                            ref={couleur.ref}
-                                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                                        >
-                                                            {couleur.title}
-                                                        </label>
-                                                    </div>
-                                                ))}
-                                            </AccordionContent>
-                                        </AccordionItem>
-                                    </Accordion>
-                                </div>
-                                <div className='mt-2'>
-                                    <Button variant={"blue"}>Ok</Button>
-                                </div>
-                            </SheetHeader>
-                        </SheetContent>
-                    </Sheet>
-                ))}
-
-                {/* Menu sur le coté non responsive */}
-                <aside id="sidebar-multi-level-sidebar" className="top-0 left-0 z-40 w-64 transition-transform -translate-x-full sm:translate-x-0 md:hidden sm:hidden hidden lg:block xl:block overflow-y-scroll" aria-label="Sidebar">
-                    <div className="h-full px-3 mb-5 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-                        <ul className=" font-medium">
-                            {/* CATEGORIES */}
-                            <li>
-                                <div className=''>
-                                    <Accordion type="single" collapsible>
-                                        <AccordionItem value="item-1">
-                                            <AccordionTrigger>Catégories</AccordionTrigger>
-                                            <AccordionContent className=''>
-                                                {categories.map((categorie) => (
-                                                    <div key={categorie.id} className='flex items-center space-x-2 mb-2'>
-                                                        <Checkbox id={categorie.name} />
-                                                        <label
-                                                            ref={categorie.ref}
-                                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                                        >
-                                                            {categorie.title}
-                                                        </label>
-                                                    </div>
-
-                                                ))}
-                                            </AccordionContent>
-                                        </AccordionItem>
-                                    </Accordion>
-                                </div>
-                            </li>
-                            {/* PRIX */}
-                            <li>
-                                <div className=''>
-                                    <Accordion type="single" collapsible>
-                                        <AccordionItem value="item-1">
-                                            <AccordionTrigger>Prix</AccordionTrigger>
-                                            <AccordionContent className='text-center'>
-                                                <div className='flex items-center space-x-2'>
-                                                    <div className="flex items-center justify-center space-x-2 mx-auto">
-                                                        <Button
-                                                            variant="outline"
-                                                            size="icon"
-                                                            className="h-8 w-8 shrink-0 rounded-full"
-                                                            onClick={() => onClick(-10)}
-                                                            disabled={goal <= 200}
-                                                        >
-                                                            <MinusIcon className="h-4 w-4" />
-                                                            <span className="sr-only">Decrease</span>
-                                                        </Button>
-                                                        <div className="flex-1 text-center">
-                                                            <div className="text-xl font-bold tracking-tighter">
-                                                                {goal}
-                                                            </div>
-                                                            <div className="text-[0.70rem] uppercase text-muted-foreground">
-                                                                Prix
-                                                            </div>
-                                                        </div>
-                                                        <Button
-                                                            variant="outline"
-                                                            size="icon"
-                                                            className="h-8 w-8 shrink-0 rounded-full"
-                                                            onClick={() => onClick(10)}
-                                                            disabled={goal >= 400}
-                                                        >
-                                                            <PlusIcon className="h-4 w-4" />
-                                                            <span className="sr-only">Increase</span>
-                                                        </Button>
-                                                    </div>
-                                                </div>
-                                            </AccordionContent>
-                                        </AccordionItem>
-                                    </Accordion>
-                                </div>
-                            </li>
-                            {/* MARQUES */}
-                            <li>
-                                <div className=''>
-                                    <Accordion type="single" collapsible>
-                                        <AccordionItem value="item-1">
-                                            <AccordionTrigger>Marques</AccordionTrigger>
-                                            <AccordionContent>
-                                                {marques.map((marque) => (
-                                                    <div key={marque.id} className='flex items-center space-x-2 mb-2'>
-                                                        <Checkbox id={marque.name} />
-                                                        <label
-                                                            ref={marque.ref}
-                                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                                        >
-                                                            {marque.title}
-                                                        </label>
-                                                    </div>
-                                                ))}
-                                            </AccordionContent>
-                                        </AccordionItem>
-                                    </Accordion>
-                                </div>
-                            </li>
-                            {/* COULEURS */}
-                            <li>
-                                <div className=''>
-                                    <Accordion type="single" collapsible>
-                                        <AccordionItem value="item-1">
-                                            <AccordionTrigger>Couleurs</AccordionTrigger>
-                                            <AccordionContent>
-                                                {couleurs.map((couleur) => (
-                                                    <div key={couleur.id} className='flex items-center space-x-2 mb-2'>
-                                                        <Checkbox id={couleur.name} />
-                                                        <label
-                                                            ref={couleur.ref}
-                                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                                        >
-                                                            {couleur.title}
-                                                        </label>
-                                                    </div>
-                                                ))}
-                                            </AccordionContent>
-                                        </AccordionItem>
-                                    </Accordion>
-                                </div>
-                            </li>
-                        </ul>
-                        <div className='mt-2'>
-                            <Button variant={"blue"}>Ok</Button>
-                        </div>
-                    </div>
-                </aside>
-
+        <div className='w-[70%] p-6'>
+            <div className='w-full'>
                 {/* Catalogue */}
                 <CartProvider>
                     <div className='flex flex-col h-auto overflow-y-scroll'>

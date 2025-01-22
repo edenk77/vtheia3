@@ -1,6 +1,7 @@
 import Layout from "@/components/layout"
 import CatalogueAll from "./partials/catalogue-all"
 import Banner from "./partials/banner"
+import { FilterMenu } from "./partials/filtermenu"
 
 
 
@@ -8,7 +9,10 @@ function Catalogue() {
     return (
         <Layout>
             <Banner />
-            <CatalogueAll />
+            <div className="flex ">
+                <FilterMenu />
+                <CatalogueAll />
+            </div>
         </Layout>
     )
 }
