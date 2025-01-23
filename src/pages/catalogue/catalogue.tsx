@@ -16,7 +16,7 @@ function Catalogue() {
     return (
         <Layout>
             <Banner />
-            <div className="flex ">
+            <div className="flex flex-col xl:flex-row xl:w-full lg:flex-row md:flex-row">
                 <FilterMenu filter={filter} setFilter={setFilter} />
                 <CatalogueAll filter={filter} />
             </div>
