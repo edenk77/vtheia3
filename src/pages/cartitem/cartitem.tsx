@@ -1,7 +1,5 @@
 import React from 'react'
 import { CartItemType } from '../catalogue/partials/catalogue-all';
-import { Button } from '@/components/ui/button';
-import { MinusCircleIcon, PlusCircleIcon, PlusIcon } from '@heroicons/react/24/outline';
 import {
     Card,
     CardContent,
@@ -11,8 +9,6 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { IconBadge4k, IconCircleMinus, IconCirclePlus, IconCirclePlusFilled } from '@tabler/icons-react';
-
-
 
 
 

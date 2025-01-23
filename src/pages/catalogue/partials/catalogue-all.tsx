@@ -44,9 +44,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-
-
-
+import FilterMenu from './filtermenu'
 
 
 
@@ -70,10 +68,8 @@ export type CartItemType = {
     price: number;
     color: string;
     amount: number;
+    data: string;
 };
-
-
-
 
 //Liste des produits 
 const products: CartItemType[] = [
@@ -87,7 +83,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'ordinateur'
+        category: 'dog',
+        data: '',
     },
     {
         id: 2,
@@ -99,7 +96,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'loupeelectronique'
+        category: 'loupeelectronique',
+        data: '',
     },
     {
         id: 3,
@@ -111,7 +109,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'lunettesloupe'
+        category: 'lunettesloupe',
+        data: '',
     }, {
         id: 4,
         name: 'Montre Parlante',
@@ -122,7 +121,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'montres'
+        category: 'montres',
+        data: '',
     }, {
         id: 5,
         name: 'Ordissimo 1',
@@ -133,7 +133,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'ordinateur'
+        category: 'ordinateur',
+        data: '',
     },
     {
         id: 6,
@@ -145,7 +146,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'telephones'
+        category: 'telephones',
+        data: '',
     },
     {
         id: 7,
@@ -157,7 +159,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'tablettes'
+        category: 'tablettes',
+        data: '',
     },
     {
         id: 8,
@@ -169,7 +172,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'lunettesloupe'
+        category: 'lunettesloupe',
+        data: '',
     },
     {
         id: 9,
@@ -181,7 +185,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'loupeelectronique'
+        category: 'loupeelectronique',
+        data: '',
     },
     {
         id: 10,
@@ -193,7 +198,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'montre'
+        category: 'montre',
+        data: '',
     },
     {
         id: 11,
@@ -205,7 +211,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'smartphones'
+        category: 'smartphones',
+        data: '',
     },
     {
         id: 12,
@@ -217,7 +224,8 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'tablettes'
+        category: 'tablettes',
+        data: '',
     },
     {
         id: 13,
@@ -229,10 +237,10 @@ const products: CartItemType[] = [
         price: 4790.00,
         color: 'Black',
         amount: 0,
-        category: 'telephonessenior'
+        category: 'telephonessenior',
+        data: '',
     },
 ];
-
 
 
 
@@ -241,7 +249,10 @@ const SHEET_SIDES = ["left"] as const
 type SheetSide = (typeof SHEET_SIDES)[number]
 
 
-const CatalogueAll = () => {
+
+
+const CatalogueAll = ({ filter }: { filter: string }) => {
+
 
     //Declaration des filtres
     const [goal, setGoal] = React.useState(350)
@@ -250,7 +261,6 @@ const CatalogueAll = () => {
     function onClick(adjustment: number) {
         setGoal(Math.max(200, Math.min(400, goal + adjustment)))
     }
-
 
 
 
@@ -264,10 +274,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image1,
                 imageAlt: "Braille Sense 6",
-                price: 47.00,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'dog',
+                data: '',
             },
             {
                 id: 2,
@@ -276,10 +287,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image2,
                 imageAlt: "Clover 2",
-                price: 94.00,
+                price: 4790.00,
                 color: 'Black',
                 amount: 0,
-                category: ''
+                category: 'loupeelectronique',
+                data: '',
             },
             {
                 id: 3,
@@ -288,10 +300,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image3,
                 imageAlt: "Loupe de lecture",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'lunettesloupe',
+                data: '',
             }, {
                 id: 4,
                 name: 'Montre Parlante',
@@ -299,10 +312,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image4,
                 imageAlt: "Montre Parlante",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'montres',
+                data: '',
             }, {
                 id: 5,
                 name: 'Ordissimo 1',
@@ -310,10 +324,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image5,
                 imageAlt: "Ordissimo 1",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'ordinateur',
+                data: '',
             },
             {
                 id: 6,
@@ -322,10 +337,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image6,
                 imageAlt: "Galaxy Ultra S21.",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'telephones',
+                data: '',
             },
             {
                 id: 7,
@@ -334,10 +350,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image7,
                 imageAlt: "Facilo Tab",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'tablettes',
+                data: '',
             },
             {
                 id: 8,
@@ -346,10 +363,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image8,
                 imageAlt: "Loupe Amelie",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'lunettesloupe',
+                data: '',
             },
             {
                 id: 9,
@@ -358,10 +376,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image9,
                 imageAlt: "Loupe Macrolux",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'loupeelectronique',
+                data: '',
             },
             {
                 id: 10,
@@ -370,10 +389,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image10,
                 imageAlt: "Montre Bayard",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'montre',
+                data: '',
             },
             {
                 id: 11,
@@ -382,10 +402,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image11,
                 imageAlt: "Iphone 11",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'smartphones',
+                data: '',
             },
             {
                 id: 12,
@@ -394,10 +415,11 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image12,
                 imageAlt: "Tablette Ordissimo",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
+                amount: 0,
+                category: 'tablettes',
+                data: '',
             },
             {
                 id: 13,
@@ -406,11 +428,12 @@ const CatalogueAll = () => {
                 hhtmlFor: '#',
                 imageSrc: image13,
                 imageAlt: "Cl8000",
-                price: 24.99,
+                price: 4790.00,
                 color: 'Black',
-                category: '',
-                amount: 0
-            }
+                amount: 0,
+                category: 'telephonessenior',
+                data: '',
+            },
         ];
     }
 
@@ -423,8 +446,6 @@ const CatalogueAll = () => {
 
     const getTotalItems = (items: CartItemType[]) =>
         items.reduce((acc, item) => acc + item.amount, 0);
-
-
     //Je crée la fonction pour l'ajout, avec le calcul 
     const handleAddToCart = (item: CartItemType) => {
         setCartItems((prev) => {
@@ -440,7 +461,6 @@ const CatalogueAll = () => {
             return [...prev, { ...item, amount: 1 }];
         });
     };
-
     //Je crée la fonction pour enlever un produit, avec le calcul 
     const handleRemoveFromCart = (id: number) => {
         setCartItems((prev) =>
@@ -454,7 +474,6 @@ const CatalogueAll = () => {
             }, [] as CartItemType[])
         );
     };
-
 
 
 
@@ -489,9 +508,29 @@ const CatalogueAll = () => {
         );
     };
     //J'applique un filtre sur les produits affichés en fonction de ce que je selctionne
-    const filteredProducts = selectedNames.length
-        ? products.filter((product) => selectedNames.includes(product.name))
-        : products;
+    const filteredProducts = filter === "all"
+        ? products
+        : products.filter((product) => product.category === filter);
+
+
+
+
+
+
+
+
+
+    //Filtre 
+    const data = ["dog", "cat", "lizard", "dog", "cat", "dog", "lizard", "dog"];
+    console.log(data);
+    const styles = {
+        padding: "10px",
+        margin: "5px",
+        background: "gold",
+        width: "100px",
+        height: "100px",
+        display: "inline-block"
+    };
 
 
 
@@ -499,18 +538,39 @@ const CatalogueAll = () => {
         <div className='w-[70%] p-6'>
             <div className='w-full'>
                 {/* Catalogue */}
+                <Panier
+                    cartItems={cartItems}
+                    addToCart={handleAddToCart}
+                    removeFromCart={handleRemoveFromCart}
+                />
                 <CartProvider>
-                    <div className='flex flex-col h-auto overflow-y-scroll'>
-                        <Panier
-                            cartItems={cartItems}
-                            addToCart={handleAddToCart}
-                            removeFromCart={handleRemoveFromCart}
-                        />
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+                    <div className='grid grid-cols-3 gap-6 '>
+
+                        {/* <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
                             {products.map((item) => (
                                 <Item key={item.id} item={item} />
                             ))}
-                        </div>
+                        </div> */}
+
+                        {filteredProducts.map((item) => (
+                            <div className='flex flex-row  max-w-full'>
+                                <div key={item.id} className=''>
+                                    <Card className='h-full w-64'>
+                                        <CardHeader>
+                                            <CardTitle>{item.name}</CardTitle>
+                                            <CardDescription>{item.description}</CardDescription>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <img src={item.imageSrc} alt={item.name} style={{ maxWidth: '100%' }} />
+                                            <p>{item.price} €</p>
+                                        </CardContent>
+                                        <CardFooter>
+                                            <Button onClick={() => handleAddToCart(item)}>Ajouter au panier</Button>
+                                        </CardFooter>
+                                    </Card>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </CartProvider>
             </div>
