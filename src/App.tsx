@@ -14,6 +14,8 @@ import Login from "./pages/auth/login"
 import Register from "./pages/auth/register"
 import Quiz from "./pages/quiz/quiz"
 import { CartItemType } from "./pages/catalogue/partials/catalogue-all"
+import { Terms } from "./pages/terms/terms"
+import { Privacy } from "./pages/privacy/privacy"
 
 
 // const routes = [{ path: "/", element: <Home /> }]
@@ -37,7 +39,8 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="quiz" element={<Quiz />} />
+        <Route path="terms" element={<Terms />} />
+        <Route path="privacy" element={<Privacy />} />
       </Routes>
 
       <TailwindIndicator />

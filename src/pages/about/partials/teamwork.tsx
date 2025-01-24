@@ -60,9 +60,9 @@ const Teamwork = () => {
                     <CardTitle className='text-5xl'>Rencontrez nos dirigeants</CardTitle>
                     <CardDescription>Une équipe d'or pour vous aider à vivre une expérience au mieux.</CardDescription>
                 </CardHeader>
-                <CardContent>
-                    <div className="bg-white py-24 sm:py-32">
-                        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+                <CardContent className="p-0">
+                    <div className="bg-white py-16 sm:py-20">
+                        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8  xl:grid-cols-2">
 
                             <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
                                 {people.map((person) => (

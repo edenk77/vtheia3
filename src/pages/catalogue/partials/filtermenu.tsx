@@ -36,6 +36,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
+import { IconFilterFilled } from '@tabler/icons-react'
 
 
 
@@ -237,7 +238,7 @@ const FilterMenu = ({ filter, setFilter }: { filter: string; setFilter: (value: 
             <div className='block p-6 lg:hidden xl:hidden'>
                 <Sheet>
                     <SheetTrigger>
-                        <Button variant="outline">Open</Button>
+                        <Button variant="ghost"><IconFilterFilled /></Button>
                     </SheetTrigger>
                     <SheetContent>
                         <SheetHeader>

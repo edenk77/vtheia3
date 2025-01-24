@@ -18,10 +18,10 @@ export function Footer() {
                             <h2 className="mb-6 text-sm font-black uppercase">ResSources</h2>
                             <ul className="  font-medium">
                                 <li className="mb-4">
-                                    <Link to={"/Contact"} className="hover:underline">WCAG Documentation</Link>
+                                    <Link to={"https://www.w3.org/WAI/standards-guidelines/wcag/docs/"} className="hover:underline">WCAG Documentation</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/Contact"} className="hover:underline">A propos</Link>
+                                    <Link to={"/About"} className="hover:underline">A propos</Link>
                                 </li>
                             </ul>
                         </div>
@@ -40,10 +40,10 @@ export function Footer() {
                             <h2 className="mb-6 text-sm font-black uppercase">Legal</h2>
                             <ul className="font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Privacy Policy</a>
+                                    <Link to={"/Privacy"} className="hover:underline">Privacy Policy</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:underline">Terms &amp; Conditions</a>
+                                    <Link to={"/Terms"} className="hover:underline">Terms &amp; Conditions</Link>
                                 </li>
                             </ul>
                         </div>

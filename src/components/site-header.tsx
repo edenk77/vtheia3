@@ -124,7 +124,7 @@ export function SiteHeader() {
         </div>
       </div>
       {/* BANNER PRODUITS ACCESSIBILTE */}
-      <div className="relative isolate h-auto flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+      <div className="relative isolate h-auto xl:block lg:block items-center gap-x-6 overflow-hidden hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
         <div
           className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
           aria-hidden="true"

@@ -11,7 +11,7 @@ const AboutText = () => {
     return (
         <div className='xl:flex md:flex xl:h-full'>
             <div className='w-full'>
-                <Card className='py-8 ml-24 border-none shadow-none'>
+                <Card className='py-8 xl:ml-24 lg:ml-24 mx-4 border-none shadow-none'>
                     <CardHeader>
                         <CardTitle className='text-3xl'>Notre mission</CardTitle>
                         <CardDescription className='w-4/5'>Notre mission est simple: créer une ouverture sur le monde de l'alternative.</CardDescription>
@@ -22,7 +22,7 @@ const AboutText = () => {
                     </CardContent>
                 </Card>
             </div>
-            <div className='w-full py-8 sm:ml-24'>
+            <div className='w-full py-8 sm:ml-24 mx-4'>
                 <div className='mb-4'>
                     <Card className='border-none shadow-none'>
                         <CardHeader>

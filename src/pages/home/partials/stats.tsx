@@ -17,7 +17,7 @@ function Stats() {
                 <CardHeader className="">
                     <CardDescription className="text-white">Nos antécédents</CardDescription>
                     <CardTitle className="text-3xl">Augmenter votre vision de la technologie</CardTitle>
-                    <CardDescription className="w-80 text-white">La clarté dans la vision et la technologie adaptive pour les personnes mnalvoyantes a été notre principale projet durant ses 5 dernières années.  </CardDescription>
+                    <CardDescription className="w-full text-white">La clarté dans la vision et la technologie adaptive pour les personnes mnalvoyantes a été notre principale projet durant ses 5 dernières années.  </CardDescription>
                 </CardHeader>
                 <CardContent className="flex flex-col xl:flex-row lg:flex-row gap-6">
 

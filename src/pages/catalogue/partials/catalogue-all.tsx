@@ -548,7 +548,7 @@ const CatalogueAll = ({ filter }: { filter: string }) => {
 
 
     return (
-        <div className='xl:w-[70%] p-6'>
+        <div className='xl:w-[70%] p-6 pt-0 md:pt-6'>
             <div className='w-full'>
                 {/* Catalogue */}
                 <Panier
@@ -559,7 +559,7 @@ const CatalogueAll = ({ filter }: { filter: string }) => {
 
                 {/* Affichage du produits */}
                 <CartProvider>
-                    <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3 '>
+                    <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 '>
 
                         {/* <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
                             {products.map((item) => (
@@ -570,7 +570,7 @@ const CatalogueAll = ({ filter }: { filter: string }) => {
                         {filteredProducts.map((item) => (
                             <div className='flex flex-row max-w-full'>
                                 <div key={item.id} className=''>
-                                    <Card className='h-full w-full md:w-72'>
+                                    <Card className='h-full w-full mr-6 md:w-72'>
                                         <CardHeader>
                                             <CardTitle>{item.name}</CardTitle>
                                             <CardDescription>{item.description}</CardDescription>

@@ -17,7 +17,7 @@ export default function Categories() {
                     <h2 className="text-2xl font-bold tracking-tight text-gray-900">Achats par catégories</h2>
                     <div className="flex justify-between">
                         <p>Voyez ici les produits les plus demandées</p>
-                        <Link to={""} className="flex italic text-blue-500">
+                        <Link to={"Catalogue"} className="flex italic text-blue-500">
                             Voir plus <IconArrowAutofitRight />
                         </Link>
                     </div>
@@ -36,10 +36,10 @@ export default function Categories() {
                             <div className="mt-4 flex justify-between">
                                 <div>
                                     <h3 className="text-sm text-gray-700">
-                                        <a href='#'>
+                                        <Link to={"Catalogue"} className="flex">
                                             <span aria-hidden="true" className="absolute inset-0" />
                                             Braille Sense 6
-                                        </a>
+                                        </Link>
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">Noir</p>
                                 </div>
@@ -60,10 +60,10 @@ export default function Categories() {
                             <div className="mt-4 flex justify-between">
                                 <div>
                                     <h3 className="text-sm text-gray-700">
-                                        <a href='#'>
+                                        <Link to={"Catalogue"} className="flex">
                                             <span aria-hidden="true" className="absolute inset-0" />
                                             Loupe Clover 1
-                                        </a>
+                                        </Link>
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">Noir</p>
                                 </div>
@@ -84,10 +84,10 @@ export default function Categories() {
                             <div className="mt-4 flex justify-between">
                                 <div>
                                     <h3 className="text-sm text-gray-700">
-                                        <a href='#'>
+                                        <Link to={"Catalogue"} className="flex">
                                             <span aria-hidden="true" className="absolute inset-0" />
                                             Montre Parlante
-                                        </a>
+                                        </Link>
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">Noir</p>
                                 </div>
@@ -108,10 +108,10 @@ export default function Categories() {
                             <div className="mt-4 flex justify-between">
                                 <div>
                                     <h3 className="text-sm text-gray-700">
-                                        <a href='#'>
+                                        <Link to={"Catalogue"} className="flex">
                                             <span aria-hidden="true" className="absolute inset-0" />
                                             Ordissimo
-                                        </a>
+                                        </Link>
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">Noir</p>
                                 </div>
