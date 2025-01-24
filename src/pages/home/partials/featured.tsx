@@ -30,14 +30,14 @@ const features = [
 const Featured = () => {
     return (
         <div>
-            <div className="bg-white py-24 px-6 sm:py-32 mx-auto">
+            <div className="py-24 px-6 sm:py-32 mx-auto">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl lg:text-center">
                         <h2 className="text-base font-semibold leading-7 text-indigo-600">Un soutien indispensable</h2>
-                        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">
                             Tout ce dont vous avez besoin pour acheter votre produit
                         </p>
-                        <p className="mt-6 text-lg leading-8 text-gray-600">
+                        <p className="mt-6 text-lg leading-8 ">
                             Comparer à d'autres catalogues pour personnes malvoyantes, nous vous assurons un soutien téléphonique et en chat pour toute vos questions.
                         </p>
                     </div>
@@ -45,13 +45,13 @@ const Featured = () => {
                         <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
                             {features.map((feature) => (
                                 <div key={feature.name} className="relative pl-16">
-                                    <dt className="text-base font-semibold leading-7 text-gray-900">
+                                    <dt className="text-base font-semibold leading-7 ">
                                         <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                                            <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                                            <feature.icon className="h-6 w-6 " aria-hidden="true" />
                                         </div>
                                         {feature.name}
                                     </dt>
-                                    <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
+                                    <dd className="mt-2 text-base leading-7 ">{feature.description}</dd>
                                 </div>
                             ))}
                         </dl>

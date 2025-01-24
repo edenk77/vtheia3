@@ -12,11 +12,11 @@ import ImageLoader from "@/components/ui/image-loader"
 export default function Categories() {
     return (
         <Card className="w-full">
-            <div className="bg-white">
+            <div className="">
                 <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-                    <h2 className="text-2xl font-bold tracking-tight text-gray-900">Achats par catégories</h2>
+                    <h2 className="text-2xl font-bold tracking-tight ">Achats par catégories</h2>
                     <div className="flex justify-between">
-                        <p>Voyez ici les produits les plus demandées</p>
+                        <p className="">Voyez ici les produits les plus demandées</p>
                         <Link to={"Catalogue"} className="flex italic text-blue-500">
                             Voir plus <IconArrowAutofitRight />
                         </Link>
@@ -35,15 +35,15 @@ export default function Categories() {
                             </div>
                             <div className="mt-4 flex justify-between">
                                 <div>
-                                    <h3 className="text-sm text-gray-700">
+                                    <h3 className="text-sm">
                                         <Link to={"Catalogue"} className="flex">
                                             <span aria-hidden="true" className="absolute inset-0" />
                                             Braille Sense 6
                                         </Link>
                                     </h3>
-                                    <p className="mt-1 text-sm text-gray-500">Noir</p>
+                                    <p className="mt-1 text-sm ">Noir</p>
                                 </div>
-                                <p className="text-sm text-gray-900 font-black">35€</p>
+                                <p className="text-sm  font-black">35€</p>
                             </div>
                         </div>
 
@@ -59,15 +59,15 @@ export default function Categories() {
                             </div>
                             <div className="mt-4 flex justify-between">
                                 <div>
-                                    <h3 className="text-sm text-gray-700">
+                                    <h3 className="text-sm ">
                                         <Link to={"Catalogue"} className="flex">
                                             <span aria-hidden="true" className="absolute inset-0" />
                                             Loupe Clover 1
                                         </Link>
                                     </h3>
-                                    <p className="mt-1 text-sm text-gray-500">Noir</p>
+                                    <p className="mt-1 text-sm ">Noir</p>
                                 </div>
-                                <p className="text-sm font-black text-gray-900">27.70€</p>
+                                <p className="text-sm font-black ">27.70€</p>
                             </div>
                         </div>
 
@@ -83,15 +83,15 @@ export default function Categories() {
                             </div>
                             <div className="mt-4 flex justify-between">
                                 <div>
-                                    <h3 className="text-sm text-gray-700">
+                                    <h3 className="text-sm ">
                                         <Link to={"Catalogue"} className="flex">
                                             <span aria-hidden="true" className="absolute inset-0" />
                                             Montre Parlante
                                         </Link>
                                     </h3>
-                                    <p className="mt-1 text-sm text-gray-500">Noir</p>
+                                    <p className="mt-1 text-sm ">Noir</p>
                                 </div>
-                                <p className="text-sm font-black text-gray-900">55€</p>
+                                <p className="text-sm font-black ">55€</p>
                             </div>
                         </div>
 
@@ -107,15 +107,15 @@ export default function Categories() {
                             </div>
                             <div className="mt-4 flex justify-between">
                                 <div>
-                                    <h3 className="text-sm text-gray-700">
+                                    <h3 className="text-sm ">
                                         <Link to={"Catalogue"} className="flex">
                                             <span aria-hidden="true" className="absolute inset-0" />
                                             Ordissimo
                                         </Link>
                                     </h3>
-                                    <p className="mt-1 text-sm text-gray-500">Noir</p>
+                                    <p className="mt-1 text-sm ">Noir</p>
                                 </div>
-                                <p className="text-sm font-black text-gray-900">123.99€</p>
+                                <p className="text-sm font-black ">123.99€</p>
                             </div>
                         </div>
 

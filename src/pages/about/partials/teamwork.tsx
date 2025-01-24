@@ -61,7 +61,7 @@ const Teamwork = () => {
                     <CardDescription>Une équipe d'or pour vous aider à vivre une expérience au mieux.</CardDescription>
                 </CardHeader>
                 <CardContent className="p-0">
-                    <div className="bg-white py-16 sm:py-20">
+                    <div className="py-16 sm:py-20">
                         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8  xl:grid-cols-2">
 
                             <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
@@ -70,7 +70,7 @@ const Teamwork = () => {
                                         <div className="flex items-center gap-x-6">
                                             <img className="h-16 w-16 rounded-full object-cover" src={person.imageUrl} alt="" />
                                             <div>
-                                                <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                                                <h3 className="text-base font-semibold leading-7 tracking-tight">{person.name}</h3>
                                                 <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
                                             </div>
                                         </div>

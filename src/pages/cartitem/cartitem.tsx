@@ -26,14 +26,14 @@ const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => {
                     <CardTitle>{item.name}</CardTitle>
                     <CardDescription>
                         <div>
-                            <p>Price: ${item.price}</p>
-                            <p>Total: ${(item.amount * item.price).toFixed(2)}</p>
+                            <p>Prix: {item.price} €</p>
+                            <p>Total: {(item.amount * item.price).toFixed(2)} €</p>
                         </div>
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
                     <img src={item.imageSrc} alt={item.name} />
-                    <p>Card Content</p>
+
                 </CardContent>
                 <CardFooter>
                     <div className='flex justify-between'>

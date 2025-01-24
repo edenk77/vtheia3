@@ -56,7 +56,7 @@ const Panier: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
                             ) : (
                                 <div>Votre panier est vide pour l'instant. Remplissez le comme bon vous semble.</div>
                             )}
-                            <h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
+                            <h2>Total: {calculateTotal(cartItems).toFixed(2)} €</h2>
                         </div>
                         <SheetFooter>
                             <SheetClose asChild>

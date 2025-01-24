@@ -29,12 +29,12 @@ export default function Banner() {
                     {/* BUTTON BANNER */}
                     <div className="mt-10 flex items-center justify-center gap-x-6 xl:max-w-full xl:justify-center lg:justify-center">
                         <Link to={"/Quiz"} className="flex items-center">
-                            <Button variant='blue'>
+                            <Button variant='blue' className="text-slate-50">
                                 Commencer le test
                             </Button>
                         </Link>
                         <Link to={"/"} className="flex items-center">
-                            <Button variant='blueoutline'>
+                            <Button variant='blueoutline' className="text-slate-50">
                                 En savoir plus<span aria-hidden="true">→</span>
                             </Button>
                         </Link>
