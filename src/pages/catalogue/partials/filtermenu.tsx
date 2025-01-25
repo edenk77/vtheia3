@@ -37,7 +37,7 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { IconFilterFilled } from '@tabler/icons-react'
-
+import { Separator } from "@/components/ui/separator"
 
 
 
@@ -47,47 +47,47 @@ interface FilterMenuProps {
 }
 
 
-const filters = [
-    {
-        id: 'categorie',
-        name: 'Categorie',
-        options: [
-            { value: 'accessoires', label: 'Accessoires', checked: false },
-            { value: 'braille', label: 'Braille', checked: false },
-            { value: 'loupeelectronique', label: 'Loupe Eléctronique', checked: false },
-            { value: 'lunettesloupe', label: 'Lunettes Loupe', checked: false },
-            { value: 'montres', label: 'Montres', checked: false },
-            { value: 'ordinateur', label: 'Ordinateur', checked: false },
-            { value: 'smartphones', label: 'Smartphones', checked: false },
-            { value: 'tablettes', label: 'Tablettes', checked: false },
-            { value: 'telephonesenior', label: 'Téléphones Senior', checked: false },
-        ]
-    },
-    {
-        id: 'color',
-        name: 'Couleur',
-        options: [
-            { value: 'white', label: 'White', checked: false },
-            { value: 'beige', label: 'Beige', checked: false },
-            { value: 'blue', label: 'Blue', checked: true },
-            { value: 'brown', label: 'Brown', checked: false },
-            { value: 'green', label: 'Green', checked: false },
-            { value: 'purple', label: 'Purple', checked: false },
-        ],
-    },
-    {
-        id: 'size',
-        name: 'Marques',
-        options: [
-            { value: '2l', label: '2L', checked: false },
-            { value: '6l', label: '6L', checked: false },
-            { value: '12l', label: '12L', checked: false },
-            { value: '18l', label: '18L', checked: false },
-            { value: '20l', label: '20L', checked: false },
-            { value: '40l', label: '40L', checked: true },
-        ],
-    },
-]
+// const filters = [
+//     {
+//         id: 'categorie',
+//         name: 'Categorie',
+//         options: [
+//             { value: 'accessoires', label: 'Accessoires', checked: false },
+//             { value: 'braille', label: 'Braille', checked: false },
+//             { value: 'loupeelectronique', label: 'Loupe Eléctronique', checked: false },
+//             { value: 'lunettesloupe', label: 'Lunettes Loupe', checked: false },
+//             { value: 'montres', label: 'Montres', checked: false },
+//             { value: 'ordinateur', label: 'Ordinateur', checked: false },
+//             { value: 'smartphones', label: 'Smartphones', checked: false },
+//             { value: 'tablettes', label: 'Tablettes', checked: false },
+//             { value: 'telephonesenior', label: 'Téléphones Senior', checked: false },
+//         ]
+//     },
+//     {
+//         id: 'color',
+//         name: 'Couleur',
+//         options: [
+//             { value: 'white', label: 'White', checked: false },
+//             { value: 'beige', label: 'Beige', checked: false },
+//             { value: 'blue', label: 'Blue', checked: true },
+//             { value: 'brown', label: 'Brown', checked: false },
+//             { value: 'green', label: 'Green', checked: false },
+//             { value: 'purple', label: 'Purple', checked: false },
+//         ],
+//     },
+//     {
+//         id: 'size',
+//         name: 'Marques',
+//         options: [
+//             { value: '2l', label: '2L', checked: false },
+//             { value: '6l', label: '6L', checked: false },
+//             { value: '12l', label: '12L', checked: false },
+//             { value: '18l', label: '18L', checked: false },
+//             { value: '20l', label: '20L', checked: false },
+//             { value: '40l', label: '40L', checked: true },
+//         ],
+//     },
+// ]
 
 function classNames(...classes: any[]) {
     return classes.filter(Boolean).join(' ')
@@ -96,7 +96,11 @@ function classNames(...classes: any[]) {
 
 
 // Influence sur le filtre - le menu et les boutons 
-const options = ["all", "dog", "cat", "lizard", "accessoires", "braille", "loupe électronique", "lunettes loupes", "montres", "ordinateur", "smartphones", "tablettes", "téléphone pour senior"];
+const categories = ["all", "accessoires", "braille", "loupe électronique", "lunettes loupes", "montres", "ordinateur", "smartphones", "tablettes", "téléphone pour senior"];
+
+const values = ["all", "< 100", "100 - 500", "500 - 1000", "1000 - 5000"];
+
+const types = ["all", "malvoyance", "cécité", "vision optimale"];
 
 
 
@@ -238,28 +242,70 @@ const FilterMenu = ({ filter, setFilter }: { filter: string; setFilter: (value: 
             <div className='block p-6 lg:hidden xl:hidden'>
                 <Sheet>
                     <SheetTrigger>
-                        <Button variant="ghost"><IconFilterFilled /></Button>
+                        <Button variant="ghost">
+                            <IconFilterFilled />
+                        </Button>
                     </SheetTrigger>
                     <SheetContent>
                         <SheetHeader>
                             <SheetTitle>Catégorie ?</SheetTitle>
                             <SheetDescription>
-                                {options.map((option) => (
-                                    <button
-                                        key={option}
-                                        onClick={() => setFilter(option)}
-                                        style={{
-                                            padding: "10px",
-                                            margin: "5px",
-                                            background: filter === option ? "gold" : "lightgray",
-                                            border: "none",
-                                            borderRadius: "5px",
-                                            cursor: "pointer",
-                                        }}
-                                    >
-                                        {option.charAt(0).toUpperCase() + option.slice(1)}
-                                    </button>
-                                ))}
+                                <div>
+                                    {categories.map((categorie) => (
+                                        <Button
+                                            key={categorie}
+                                            onClick={() => setFilter(categorie)}
+                                            style={{
+                                                padding: "10px",
+                                                margin: "5px",
+                                                background: filter === categorie ? "dodgerblue" : "black",
+                                                cursor: "pointer",
+                                            }}
+                                        >
+                                            {categorie.charAt(0).toUpperCase() + categorie.slice(1)}
+                                        </Button>
+                                    ))}
+                                </div>
+
+                                <Separator className="my-4" />
+
+                                <div>
+                                    {values.map((value) => (
+                                        <Button
+                                            key={value}
+                                            onClick={() => setFilter(value)}
+                                            style={{
+                                                padding: "10px",
+                                                margin: "5px",
+                                                background: filter === value ? "dodgerblue" : "black",
+                                                cursor: "pointer",
+                                            }}
+                                        >
+                                            {value.charAt(0).toUpperCase() + value.slice(1)}
+                                        </Button>
+                                    ))}
+                                </div>
+
+                                <Separator className="my-4" />
+
+                                <div>
+                                    {types.map((type) => (
+                                        <Button
+                                            key={type}
+                                            onClick={() => setFilter(type)}
+                                            style={{
+                                                padding: "10px",
+                                                margin: "5px",
+                                                background: filter === type ? "gold" : "lightgray",
+
+                                                cursor: "pointer",
+                                            }}
+                                        >
+                                            {type.charAt(0).toUpperCase() + type.slice(1)}
+                                        </Button>
+                                    ))}
+                                </div>
+
                             </SheetDescription>
                         </SheetHeader>
                     </SheetContent>
@@ -268,39 +314,77 @@ const FilterMenu = ({ filter, setFilter }: { filter: string; setFilter: (value: 
 
 
             {/* Desktop */}
-            <div className="bg-white hidden xl:block lg:block p-2">
-
+            <div className="hidden xl:block lg:block p-2">
                 <Accordion type="single" className='pl-6' collapsible>
                     <AccordionItem value="item-1">
                         <AccordionTrigger >
                             Catégorie :
                         </AccordionTrigger>
                         <AccordionContent>
-                            {options.map((option) => (
-                                <button
-                                    key={option}
-                                    onClick={() => setFilter(option)}
+                            {categories.map((categorie) => (
+                                <Button
+                                    key={categorie}
+                                    onClick={() => setFilter(categorie)}
                                     style={{
                                         padding: "10px",
                                         margin: "5px",
-                                        background: filter === option ? "gold" : "lightgray",
-                                        border: "none",
-                                        borderRadius: "5px",
+                                        background: filter === categorie ? "dodgerblue" : "black",
                                         cursor: "pointer",
                                     }}
                                 >
-                                    {option.charAt(0).toUpperCase() + option.slice(1)}
-                                </button>
+                                    {categorie.charAt(0).toUpperCase() + categorie.slice(1)}
+                                </Button>
+                            ))}
+                        </AccordionContent>
+                    </AccordionItem>
+
+
+                    <AccordionItem value="item-2">
+                        <AccordionTrigger >
+                            Prix :
+                        </AccordionTrigger>
+                        <AccordionContent>
+                            {values.map((value) => (
+                                <Button
+                                    key={value}
+                                    onClick={() => setFilter(value)}
+                                    style={{
+                                        padding: "10px",
+                                        margin: "5px",
+                                        background: filter === value ? "dodgerblue" : "black",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    {value.charAt(0).toUpperCase() + value.slice(1)}
+                                </Button>
+                            ))}
+                        </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="item-3">
+                        <AccordionTrigger >
+                            Type de vision :
+                        </AccordionTrigger>
+                        <AccordionContent>
+                            {types.map((type) => (
+                                <Button
+                                    key={type}
+                                    onClick={() => setFilter(type)}
+                                    style={{
+                                        padding: "10px",
+                                        margin: "5px",
+                                        background: filter === type ? "dodgerblue" : "black",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    {type.charAt(0).toUpperCase() + type.slice(1)}
+                                </Button>
                             ))}
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
             </div>
-
         </div>
-
-
-
     )
 }
 

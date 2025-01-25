@@ -123,6 +123,7 @@ export function SiteHeader() {
           </Sheet>
         </div>
       </div>
+
       {/* BANNER PRODUITS ACCESSIBILTE */}
       <div className="relative isolate h-auto xl:block lg:block items-center gap-x-6 overflow-hidden hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
         <div
@@ -136,34 +137,34 @@ export function SiteHeader() {
         >
         </div>
         <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
-          <Badge className="uppercase" variant={"outline"}>
+          <Badge className="uppercase" variant={"outlinebadge"}>
             <Link to={"/Contact"}>SMARTPHONES</Link>
           </Badge>
-          <Badge className="uppercase" variant={"outline"}>
+          <Badge className="uppercase" variant={"outlinebadge"}>
             <Link to={"/Contact"}>Ordinateurs</Link>
           </Badge>
-          <Badge className="uppercase" variant={"outline"}>
+          <Badge className="uppercase" variant={"outlinebadge"}>
             <Link to={"/Contact"}>Lecteurs d'écran</Link>
           </Badge>
-          <Badge className="uppercase" variant={"outline"}>
+          <Badge className="uppercase" variant={"outlinebadge"}>
             <Link to={"/Contact"}>Montres</Link>
           </Badge>
-          <Badge className="uppercase" variant={"outline"}>
+          <Badge className="uppercase" variant={"outlinebadge"}>
             <Link to={"/Contact"}>Tablettes</Link>
           </Badge>
-          <Badge className="uppercase" variant={"outline"}>
+          <Badge className="uppercase" variant={"outlinebadge"}>
             <Link to={"/Contact"}>Loupes</Link>
           </Badge>
-          <Badge className="uppercase" variant={"outline"}>
+          <Badge className="uppercase" variant={"outlinebadge"}>
             <Link to={"/Contact"}>Claviers</Link>
           </Badge>
-          <Badge className="uppercase" variant={"outline"}>
+          <Badge className="uppercase" variant={"outlinebadge"}>
             <Link to={"/Contact"}>Braille</Link>
           </Badge>
-          <Badge className="uppercase" variant={"outline"}>
+          <Badge className="uppercase" variant={"outlinebadge"}>
             <Link to={"/Contact"}>Lunettes</Link>
           </Badge>
-          <Badge className="uppercase" variant={"outline"}>
+          <Badge className="uppercase" variant={"outlinebadge"}>
             <Link to={"/Contact"}>Téléphones seniors</Link>
           </Badge>
         </div>
