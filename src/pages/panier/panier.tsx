@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sheet"
 import { CartItemType } from "../catalogue/partials/catalogue-all"
 import CartItem from "../cartitem/cartitem"
+import { Badge } from "@/components/ui/badge";
 
 
 
@@ -23,16 +24,27 @@ type Props = {
 
 const Panier: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
 
+    //Me donne le calcul total du panier
     const calculateTotal = (items: CartItemType[]) =>
         items.reduce((acc: number, item) => acc + item.amount * item.price, 0);
+
+
+    const calculateTotalBadge = (items: CartItemType[]) =>
+        items.reduce((acc: number, item) => acc + item.amount, 0);
+
 
     return (
         <>
             {/* Commentaire : C'est ici que je stocke tout mes produits de panier */}
             <div className="pb-6">
                 <Sheet>
-                    <SheetTrigger asChild className="p-6">
-                        <Button variant="outline">Valider mon panier</Button>
+                    <SheetTrigger asChild className="p-6 flex justify-end">
+                        <Button variant="outline" className="">
+                            Valider mon panier
+                            <Badge variant="destructive" className="ml-2">
+                                {calculateTotalBadge(cartItems)}
+                            </Badge>
+                        </Button>
                     </SheetTrigger>
                     <SheetContent className="overflow-auto">
                         <SheetHeader>

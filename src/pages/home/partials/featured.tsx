@@ -30,7 +30,7 @@ const features = [
 const Featured = () => {
     return (
         <div>
-            <div className="py-24 px-6 sm:py-32 mx-auto">
+            <div className="py-24 px-6 sm:py-32 mb-16 mx-auto">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl lg:text-center">
                         <h2 className="text-base font-semibold leading-7 text-indigo-600">Un soutien indispensable</h2>
@@ -47,7 +47,7 @@ const Featured = () => {
                                 <div key={feature.name} className="relative pl-16">
                                     <dt className="text-base font-semibold leading-7 ">
                                         <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                                            <feature.icon className="h-6 w-6 " aria-hidden="true" />
+                                            <feature.icon className="h-6 w-6 stroke-white" aria-hidden="true" />
                                         </div>
                                         {feature.name}
                                     </dt>

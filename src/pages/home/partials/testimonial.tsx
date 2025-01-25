@@ -41,8 +41,8 @@ const Testimonial = () => {
                                         </Avatar>
 
                                         <p className="text-xl">Léa Martin</p>
-                                        <p className="text-slate-400">Étudiante en informatique</p>
-                                        <p className="text-slate-400">25 ans</p>
+                                        <p className="">Étudiante en informatique</p>
+                                        <p className="">25 ans</p>
                                     </div>
                                 </TabsTrigger>
 
@@ -54,8 +54,8 @@ const Testimonial = () => {
                                         </Avatar>
 
                                         <p className="text-xl">Sophie Durand</p>
-                                        <p className="text-slate-400">Retraitée, ancienne enseignante</p>
-                                        <p className="text-slate-400">42 ans</p>
+                                        <p className="=">Retraitée, ancienne enseignante</p>
+                                        <p className="">67 ans</p>
                                     </div>
                                 </TabsTrigger>
 
@@ -68,8 +68,8 @@ const Testimonial = () => {
 
                                         <p className="text-xl">
                                             Marc Dubois</p>
-                                        <p className="text-slate-400">Musicien</p>
-                                        <p className="text-slate-400">60 ans</p>
+                                        <p className="">Musicien</p>
+                                        <p className="">60 ans</p>
                                     </div>
                                 </TabsTrigger>
 
@@ -83,7 +83,7 @@ const Testimonial = () => {
                                         <p className="text-xl">
                                             Paul Lefebvre</p>
                                         <p>Consultant en ressources humaines</p>
-                                        <p className="text-slate-400">35 ans</p>
+                                        <p className="">35 ans</p>
                                     </div>
                                 </TabsTrigger>
 

@@ -1,12 +1,30 @@
-// Commentaires : Ici se trouve le SVG du logo
-export default function ApplicationLogo({ }: { className?: string, fillColor?: string }) {
-    return (
-        <svg width="93" height="36" viewBox="0 0 93 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50.442 57.1691H42.2411L25.8398 19.0999V5.70801H33.4386V18.047L46.2288 48.4423H46.4546L59.3198 18.047V5.70801H66.9185V19.0999L50.442 57.1691Z" fill="white" />
-            <path d="M38.1874 60.0614C28.5382 60.0614 23.8008 56.2892 23.8008 47.2539V12.8669C23.8008 3.83084 28.5382 0.0585938 38.1874 0.0585938H54.592C64.2416 0.0585938 68.9789 3.83084 68.9789 12.8669V47.2539C68.9789 56.2892 64.2416 60.0614 54.592 60.0614H38.1874ZM53.4513 51.8152C58.7147 51.8152 60.1189 49.9732 60.1189 45.5871V14.4455C60.1189 10.059 58.7147 8.21733 53.4513 8.21733H39.3281C34.0643 8.21733 32.6609 10.059 32.6609 14.4455V45.5871C32.6609 49.9732 34.0643 51.8152 39.3281 51.8152H53.4513Z" fill="white" />
-            <rect x="0.617188" y="70.4668" width="91.4376" height="4.84138" fill="white" />
-            <path d="M52.3119 22.9028C52.3119 19.6961 49.7124 17.0967 46.5057 17.0967C43.299 17.0967 40.6992 19.6961 40.6992 22.9028C40.6992 26.1095 43.299 28.7089 46.5057 28.7089C49.7124 28.7089 52.3119 26.1095 52.3119 22.9028Z" fill="white" />
-        </svg>
-
-    );
-}
+import * as React from "react";
+import { JSX } from "react/jsx-runtime";
+const ApplicationLogo = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
+    <svg
+        id="Calque_2"
+        data-name="Calque 2"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 122.46 203.97"
+        {...props}
+    >
+        <defs>
+            <style>
+                {
+                    "\n      .cls-1 {\n        fill: #fff;\n        stroke-width: 0px;\n      }\n    "
+                }
+            </style>
+        </defs>
+        <g id="Calque_5" data-name="Calque 5">
+            <g>
+                <path
+                    className="cls-1"
+                    d="m83.46,0h-44.47C12.84,0,0,10.23,0,34.72v93.21c0,24.49,12.84,34.72,39,34.72h44.47c26.16,0,39-10.23,39-34.72V34.72C122.46,10.23,109.62,0,83.46,0Zm-41.37,22.11h38.28c8.67,0,13.47,1.85,15.91,5.96v20.68l-34.87,82.39h-.61L26.12,48.76v-20.59c2.42-4.18,7.23-6.06,15.96-6.06Zm-18.07,101.29v-28.88l19.72,45.76h-1.64c-14.27,0-18.07-4.99-18.07-16.88Zm56.35,16.88h-1.88l19.95-46.09v29.21c0,11.89-3.81,16.88-18.07,16.88Z"
+                />
+                <rect className="cls-1" y={190.85} width={122.46} height={13.12} />
+                <circle className="cls-1" cx={61.54} cy={61.92} r={15.74} />
+            </g>
+        </g>
+    </svg>
+);
+export default ApplicationLogo;

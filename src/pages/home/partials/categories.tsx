@@ -43,7 +43,7 @@ export default function Categories() {
                                     </h3>
                                     <p className="mt-1 text-sm ">Noir</p>
                                 </div>
-                                <p className="text-sm  font-black">35€</p>
+                                <p className="text-sm  font-black">4790€</p>
                             </div>
                         </div>
 
@@ -67,7 +67,7 @@ export default function Categories() {
                                     </h3>
                                     <p className="mt-1 text-sm ">Noir</p>
                                 </div>
-                                <p className="text-sm font-black ">27.70€</p>
+                                <p className="text-sm font-black ">188.00€</p>
                             </div>
                         </div>
 
@@ -91,7 +91,7 @@ export default function Categories() {
                                     </h3>
                                     <p className="mt-1 text-sm ">Noir</p>
                                 </div>
-                                <p className="text-sm font-black ">55€</p>
+                                <p className="text-sm font-black ">65€</p>
                             </div>
                         </div>
 
@@ -115,7 +115,7 @@ export default function Categories() {
                                     </h3>
                                     <p className="mt-1 text-sm ">Noir</p>
                                 </div>
-                                <p className="text-sm font-black ">123.99€</p>
+                                <p className="text-sm font-black ">189.00€</p>
                             </div>
                         </div>
 

@@ -8,6 +8,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import { Link } from "react-router-dom"
 
 
 function Stats() {
@@ -56,7 +57,12 @@ function Stats() {
 
                 </CardContent>
                 <CardFooter className="flex justify-center">
-                    <Button variant={"ghost"}>Voir plus</Button>
+                    <Link to={"Catalogue"} className="flex">
+                        <Button variant={"ghost"}>
+                            Voir plus
+                        </Button>
+                    </Link>
+
                 </CardFooter>
             </Card>
         </div>

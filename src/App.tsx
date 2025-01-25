@@ -16,6 +16,7 @@ import Quiz from "./pages/quiz/quiz"
 import { CartItemType } from "./pages/catalogue/partials/catalogue-all"
 import { Terms } from "./pages/terms/terms"
 import { Privacy } from "./pages/privacy/privacy"
+import ResetFormAndRedirect from "./pages/reset/reset"
 
 
 // const routes = [{ path: "/", element: <Home /> }]
@@ -41,6 +42,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="terms" element={<Terms />} />
         <Route path="privacy" element={<Privacy />} />
+        <Route path="reset" element={<ResetFormAndRedirect />} />
       </Routes>
 
       <TailwindIndicator />

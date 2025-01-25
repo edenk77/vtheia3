@@ -21,7 +21,6 @@ import { ModeToggle } from "./mode-toggle"
 
 
 
-
 export function SiteHeader() {
   return (
     // Commentaires : Ici c'est la conception du menu de manière frontend avec le css additionnel.
@@ -30,7 +29,7 @@ export function SiteHeader() {
       <div className=" w-full flex justify-between justify-items-center content-center  p-4">
         {/* Logo */}
         <NavLink className="flex items-center space-x-3 rtl:space-x-reverse" to={"/"}>
-          <ApplicationLogo className="h-2" />
+          <ApplicationLogo className="h-10 ml-16" />
         </NavLink>
         {/* UL MENU */}
         <div className="flex gap-6 items-center">
@@ -58,7 +57,7 @@ export function SiteHeader() {
         <div className="flex gap-6 items-center">
           {/* <Input /> */}
           <div className="flex items-center gap-6">
-            <Link to={"/panier"} className="text-white">
+            <Link to={"/Catalogue#"} className="text-white">
               <IconBasketCheck />
             </Link>
             <ModeToggle />

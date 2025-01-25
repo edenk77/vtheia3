@@ -9,20 +9,42 @@ import {
 } from "@/components/ui/card"
 import ImageLoader from "@/components/ui/image-loader"
 import Img1 from '@/img/desktoplinus.jpg'
-import { Field } from '@headlessui/react'
-import { Switch } from "@/components/ui/switch"
-import { Label } from "@/components/ui/label"
+import { FormProvider, useForm } from "react-hook-form"
+import { useState } from "react"
+import { Input } from "@/components/ui/input"
+import {
+    name_validation,
+    desc_validation,
+    email_validation,
+    num_validation,
+    // password_validation,
+} from '../../../utils/inputValidations'
+import { IconMailFilled } from "@tabler/icons-react"
+import { CheckBadgeIcon } from "@heroicons/react/24/outline"
+
+
 
 
 
 
 const ContactForm = () => {
+
+    const methods = useForm()
+    const [success, setSuccess] = useState(false)
+
+    const onSubmit = methods.handleSubmit(data => {
+        console.log(data)
+        methods.reset()
+        setSuccess(true)
+    })
+
+
     return (
-        <div className="flex flex-col xl:flex-row lg:flex-row">
+        <div className="flex flex-col xl:flex-row lg:flex-row my-12">
             <div className='xl:w-2/5 lg:w-3/6'>
                 <Card className="border-none shadow-none xl:ml-12 md:mx-24">
                     <CardHeader >
-                        <CardTitle className="mt-16">Contactez-nous!</CardTitle>
+                        <CardTitle className="">Contactez-nous!</CardTitle>
                         <CardDescription>Remplissez le formulaire pour nous contacer.</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -41,7 +63,7 @@ const ContactForm = () => {
             <div className='xl:w-3/5'>
                 <Card className="border-none shadow-none">
                     <CardContent >
-                        <form action="/contact" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+                        {/* <form action="" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
                             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                                 <div>
                                     <label htmlFor="first-name" className="block text-sm font-semibold leading-6 ">
@@ -148,7 +170,7 @@ const ContactForm = () => {
                                             <Label htmlFor="airplane-mode">Airplane Mode</Label>
                                         </Switch>
                                     </div>
-                                    <Label className="text-sm leading-6 ">
+                                    <Label className="text-sm leading-6 text-gray-600">
                                         En sélectionnant cette option, vous acceptez notre{' '}
                                         <a href="#" className="font-semibold text-indigo-600">
                                             politique de confidentialité
@@ -158,14 +180,50 @@ const ContactForm = () => {
                                 </Field>
                             </div>
                             <div className="mt-10">
-                                <button
-                                    type="submit"
-                                    className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                >
-                                    Envoyer
-                                </button>
+                                <Link to={"/Reset"} className="flex items-center">
+                                    <button
+                                        type="submit"
+                                        className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    >
+                                        Envoyer
+                                    </button>
+                                </Link>
                             </div>
-                        </form>
+                        </form> */}
+
+                        <div className="mx-auto mt-16 max-w-xl sm:mt-20">
+                            <FormProvider {...methods}>
+                                <form
+                                    onSubmit={e => e.preventDefault()}
+                                    noValidate
+                                    autoComplete="off"
+                                    className="container"
+                                >
+                                    <div className="grid gap-5 md:grid-cols-2">
+                                        <Input {...name_validation} />
+                                        <Input {...email_validation} />
+                                        <Input {...num_validation} />
+                                        {/* <Input {...password_validation} /> */}
+                                        <Input {...desc_validation} className="md:col-span-2" />
+                                    </div>
+                                    <div className="mt-5">
+                                        {success && (
+                                            <p className="font-semibold text-green-500 mb-5 flex items-center gap-1">
+                                                <CheckBadgeIcon className="w-5" /> Merci ! Votre message nous a été envoyé.
+                                            </p>
+                                        )}
+                                        <button
+                                            onClick={onSubmit}
+                                            className="p-4 rounded-md bg-blue-600 font-semibold text-white flex items-center gap-1 hover:bg-blue-800 w-full justify-center"
+                                        >
+                                            <IconMailFilled />
+                                            Envoyer
+                                        </button>
+                                    </div>
+                                </form>
+                            </FormProvider>
+                        </div>
+
                     </CardContent>
                     <CardFooter>
 

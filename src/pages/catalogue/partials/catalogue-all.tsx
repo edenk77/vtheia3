@@ -279,8 +279,6 @@ const CatalogueAll = ({ filter }: { filter: string }) => {
     const [cartItems, setCartItems] = useState([] as CartItemType[]);
 
 
-    const getTotalItems = (items: CartItemType[]) =>
-        items.reduce((acc, item) => acc + item.amount, 0);
     //Je crée la fonction pour l'ajout, avec le calcul 
     const handleAddToCart = (item: CartItemType) => {
         setCartItems((prev) => {
@@ -374,7 +372,7 @@ const CatalogueAll = ({ filter }: { filter: string }) => {
                                         <CardHeader>
                                             <CardTitle>{item.name}</CardTitle>
                                             <CardDescription>{item.description}</CardDescription>
-                                            <CardDescription className=''>
+                                            <CardDescription className='hidden'>
                                                 {item.value}{item.type}
                                             </CardDescription>
                                         </CardHeader>
