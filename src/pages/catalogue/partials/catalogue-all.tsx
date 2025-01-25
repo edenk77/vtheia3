@@ -1,19 +1,5 @@
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
-import { Checkbox } from "@/components/ui/checkbox"
-import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
-import {
-    Sheet,
-    SheetContent,
-    SheetHeader,
-    SheetTrigger,
-} from "@/components/ui/sheet"
 import { CartProvider } from '@/pages/store/cart-context'
 import Panier from '@/pages/panier/panier'
 import image1 from "@/img/data/braille/braillesense6/braillesense_6_vue.jpg"
@@ -37,14 +23,6 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select"
-import FilterMenu from './filtermenu'
 
 
 
@@ -296,192 +274,6 @@ type SheetSide = (typeof SHEET_SIDES)[number]
 const CatalogueAll = ({ filter }: { filter: string }) => {
 
 
-    //Declaration des filtres
-
-    // const [goal, setGoal] = React.useState(350)
-
-
-    // function onClick(adjustment: number) {
-    //     setGoal(Math.max(200, Math.min(400, goal + adjustment)))
-    // }
-
-
-
-    //Je lie mes produits avec CartItemType pour le panier et
-    // const getProducts = async (): Promise<CartItemType[]> => {
-    //     return [
-
-    //         {
-    //             id: 2,
-    //             name: 'Clover 2',
-    //             description: 'Full HD, image crystal',
-    //             htmlFor: '#',
-    //             imageSrc: image2,
-    //             imageAlt: "Clover 2",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'loupeelectronique',
-    //             data: '',
-    //             marques: ''
-    //         },
-    //         {
-    //             id: 3,
-    //             name: 'Loupe de lecture',
-    //             description: 'Loupe grossissante, x10, souple',
-    //             htmlFor: '#',
-    //             imageSrc: image3,
-    //             imageAlt: "Loupe de lecture",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'lunettesloupe',
-    //             data: '',
-    //             marques: ''
-    //         }, {
-    //             id: 4,
-    //             name: 'Montre Parlante',
-    //             description: 'Montre pour aveugle',
-    //             htmlFor: '#',
-    //             imageSrc: image4,
-    //             imageAlt: "Montre Parlante",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'montres',
-    //             data: '',
-    //             marques: ''
-    //         }, {
-    //             id: 5,
-    //             name: 'Ordissimo 1',
-    //             description: 'Ordinateur pour Seniors',
-    //             htmlFor: '#',
-    //             imageSrc: image5,
-    //             imageAlt: "Ordissimo 1",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'ordinateur',
-    //             data: '',
-    //             marques: ''
-    //         },
-    //         {
-    //             id: 6,
-    //             name: 'Galaxy Ultra S21',
-    //             description: 'Recommandé WCAG, Accesibilité',
-    //             htmlFor: '#',
-    //             imageSrc: image6,
-    //             imageAlt: "Galaxy Ultra S21.",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'telephones',
-    //             data: '',
-    //             marques: ''
-    //         },
-    //         {
-    //             id: 7,
-    //             name: 'Facilo Tab',
-    //             description: 'Tablette pour Senior, Utilisation simplifiée',
-    //             htmlFor: '#',
-    //             imageSrc: image7,
-    //             imageAlt: "Facilo Tab",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'tablettes',
-    //             data: '',
-    //             marques: ''
-    //         },
-    //         {
-    //             id: 8,
-    //             name: 'Loupe Amelie',
-    //             description: 'DMLA ou cataracte, agrandissement, lecture simplifiée',
-    //             htmlFor: '#',
-    //             imageSrc: image8,
-    //             imageAlt: "Loupe Amelie",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'lunettesloupe',
-    //             data: '',
-    //             marques: ''
-    //         },
-    //         {
-    //             id: 9,
-    //             name: 'Loupe Macrolux',
-    //             description: 'LED SMD, 3.6x loupe éclairée',
-    //             htmlFor: '#',
-    //             imageSrc: image9,
-    //             imageAlt: "Loupe Macrolux",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'loupeelectronique',
-    //             data: '',
-    //             marques: ''
-    //         },
-    //         {
-    //             id: 10,
-    //             name: 'Montre Bayard',
-    //             description: 'Montre Quartz',
-    //             htmlFor: '#',
-    //             imageSrc: image10,
-    //             imageAlt: "Montre Bayard",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'montre',
-    //             data: '',
-    //             marques: ''
-    //         },
-    //         {
-    //             id: 11,
-    //             name: 'Iphone 11',
-    //             description: 'Écran Liquid Retina, LCD, Accessibilité',
-    //             htmlFor: '#',
-    //             imageSrc: image11,
-    //             imageAlt: "Iphone 11",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'smartphones',
-    //             data: '',
-    //             marques: ''
-    //         },
-    //         {
-    //             id: 12,
-    //             name: 'Tablette Ordissimo',
-    //             description: 'Tablette simplifiée, Senior',
-    //             htmlFor: '#',
-    //             imageSrc: image12,
-    //             imageAlt: "Tablette Ordissimo",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'tablettes',
-    //             data: '',
-    //             marques: ''
-    //         },
-    //         {
-    //             id: 13,
-    //             name: 'Cl8000',
-    //             description: 'Téléphone fixe, Bouton SOS',
-    //             htmlFor: '#',
-    //             imageSrc: image13,
-    //             imageAlt: "Cl8000",
-    //             price: 4790.00,
-    //             color: 'Black',
-    //             amount: 0,
-    //             category: 'telephonessenior',
-    //             data: '',
-    //             marques: ''
-    //         },
-    //     ];
-    // }
-
-
-
     //Declaration pour l'ajout des produits dans le panier 
     const [cartOpen, setCartOpen] = useState(false);
     const [cartItems, setCartItems] = useState([] as CartItemType[]);
@@ -555,10 +347,8 @@ const CatalogueAll = ({ filter }: { filter: string }) => {
         : products.filter((product) =>
             product.category === filter ||
             product.value === filter ||
-            product.types === filter
+            product.type === filter
         );
-
-
 
 
 
@@ -577,11 +367,6 @@ const CatalogueAll = ({ filter }: { filter: string }) => {
                 {/* Affichage du produits */}
                 <CartProvider>
                     <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 '>
-                        {/* <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
-                            {products.map((item) => (
-                                <Item key={item.id} item={item} />
-                            ))} grid grid-cols-3 gap-6 
-                        </div> */}
                         {filteredProducts.map((item) => (
                             <div className='flex flex-row max-w-full' key={item.id}>
                                 <div key={item.id} className=''>
