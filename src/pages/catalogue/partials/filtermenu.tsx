@@ -87,7 +87,7 @@ const FilterMenu = ({ filter, setFilter }: { filter: string; setFilter: (value: 
                                         style={{
                                             padding: "10px",
                                             margin: "5px",
-                                            background: filter === categorie ? "dodgerblue" : "black",
+                                            background: filter === categorie ? "dodgerblue" : "white",
                                             cursor: "pointer",
                                         }}
                                     >
@@ -105,7 +105,7 @@ const FilterMenu = ({ filter, setFilter }: { filter: string; setFilter: (value: 
                                         style={{
                                             padding: "10px",
                                             margin: "5px",
-                                            background: filter === value ? "dodgerblue" : "black",
+                                            background: filter === value ? "dodgerblue" : "white",
                                             cursor: "pointer",
                                         }}
                                     >
@@ -123,7 +123,7 @@ const FilterMenu = ({ filter, setFilter }: { filter: string; setFilter: (value: 
                                         style={{
                                             padding: "10px",
                                             margin: "5px",
-                                            background: filter === type ? "dodgerblue" : "black",
+                                            background: filter === type ? "dodgerblue" : "white",
                                             cursor: "pointer",
                                         }}
                                     >

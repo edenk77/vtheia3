@@ -38,10 +38,10 @@ export function Footer() {
                             <h2 className="mb-6 text-sm font-black uppercase">Legal</h2>
                             <ul className="font-medium">
                                 <li className="mb-4">
-                                    <Link to={"/Privacy"} className="hover:underline">Privacy Policy</Link>
+                                    <Link to={"/Privacy"} className="hover:underline">Politique de confidentialité</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/Terms"} className="hover:underline">Terms &amp; Conditions</Link>
+                                    <Link to={"/Terms"} className="hover:underline">Termes &amp; Conditions</Link>
                                 </li>
                             </ul>
                         </div>

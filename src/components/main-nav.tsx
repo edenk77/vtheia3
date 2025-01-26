@@ -56,7 +56,7 @@ export function MainNav() {
             " opacity-80",
           )}
         >
-          A Propos
+          À Propos
         </Link>
 
         <Link

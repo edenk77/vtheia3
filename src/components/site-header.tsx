@@ -29,7 +29,7 @@ export function SiteHeader() {
       <div className=" w-full flex justify-between justify-items-center content-center  p-4">
         {/* Logo */}
         <NavLink className="flex items-center space-x-3 rtl:space-x-reverse" to={"/"}>
-          <ApplicationLogo className="h-10 ml-16" />
+          <ApplicationLogo className="h-10 ml-4" />
         </NavLink>
         {/* UL MENU */}
         <div className="flex gap-6 items-center">

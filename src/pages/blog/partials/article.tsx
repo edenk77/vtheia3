@@ -9,7 +9,7 @@ import Img5 from '@/img/persona/anne.jpg'
 const articles = [
     {
         id: 1,
-        time: ' Mar 16, 2020',
+        time: 'Sep 16, 2024',
         badge: 'Marketing',
         imageSrc: Img1,
         title: "Augmentez votre expérience dans l'accessibilité",
@@ -20,7 +20,7 @@ const articles = [
     },
     {
         id: 2,
-        time: 'Mar 16, 2020',
+        time: 'Août 24, 2024',
         badge: 'Web',
         imageSrc: Img2,
         title: 'Les suggestions web',
@@ -31,7 +31,7 @@ const articles = [
     },
     {
         id: 3,
-        time: 'Mar 16, 2020',
+        time: 'Jan 16, 2025',
         badge: 'Documentation',
         imageSrc: Img3,
         title: 'Les normes WCAG',

@@ -23,7 +23,7 @@ const AboutText = () => {
                     </CardContent>
                 </Card>
             </div>
-            <div className='w-full py-8 sm:ml-24 mx-4'>
+            <div className='py-8 sm:ml-24 mx-4'>
                 <div className='mb-4'>
                     <Card className='border-none shadow-none'>
                         <CardHeader>
