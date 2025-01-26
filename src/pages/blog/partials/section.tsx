@@ -7,7 +7,7 @@ import Img2 from '@/img/SmallCargoTruck_Voytheia.jpg'
 const Section = () => {
     return (
         <Card className='border-none shadow-none'>
-            <div className="gap-16 items-center py-8 px-6 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+            <div className="gap-16 items-center py-8 px-16 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-16 md:px-16">
                 <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">L'importance de la vue ;)</h2>
                     <p className="mb-4">Nous avons compris qu'il y a différent type de vue. Le monde ne le comprend pas encore et l'importance d'un produit peut tout changer chez l'utilisateur.</p>

@@ -63,6 +63,7 @@
 		"react-day-picker": "^8.10.0",
 		"react-dom": "^18.2.0",
 		"react-hook-form": "^7.54.2",
+		"react-image-webp": "^0.8.0",
 		"react-imageloader": "^3.0.0",
 		"react-native-svg": "^15.11.1",
 		"react-query": "^3.39.3",
