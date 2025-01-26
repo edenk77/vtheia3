@@ -14,7 +14,6 @@ function Quiz() {
                     </p>
                 </div>
                 <div>
-                    {/* <CardQuestionSimple questions={undefined} /> */}
                     <CardQuestion />
                     <TextToVoice />
                 </div>

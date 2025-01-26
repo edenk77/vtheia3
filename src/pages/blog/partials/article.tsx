@@ -4,6 +4,8 @@ import Img3 from '@/img/destoplinus3.jpg'
 import Img4 from '@/img/persona/jakes.jpg'
 import Img5 from '@/img/persona/anne.jpg'
 
+
+//Variables de mes articles pour en ajouter ou les supprimer
 const articles = [
     {
         id: 1,
@@ -14,12 +16,12 @@ const articles = [
         description: "C'est bel et bien une expérience et vous allez devenri meilleur grâce à notre article",
         imagePersona: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
         personaName: 'Michael Foster',
-        personaRole: 'Co-Founder / CTO',
+        personaRole: 'Co-Fondateur / CTO',
     },
     {
         id: 2,
         time: 'Mar 16, 2020',
-        badge: 'Marketing',
+        badge: 'Web',
         imageSrc: Img2,
         title: 'Les suggestions web',
         description: "il est vrai qu'il est difficile de trouver tout ce que vous souhaitez à proximité: nous sommes là pour cela.",
@@ -30,13 +32,13 @@ const articles = [
     {
         id: 3,
         time: 'Mar 16, 2020',
-        badge: 'Marketing ',
+        badge: 'Documentation',
         imageSrc: Img3,
         title: 'Les normes WCAG',
         description: 'Tout le monde veut faire du web mais personne ne connait réellement ses règles?',
         imagePersona: Img5,
         personaName: 'Anne Swoden',
-        personaRole: 'Co-Founder / CTO',
+        personaRole: 'Analyste',
     }
 ]
 
@@ -56,6 +58,7 @@ const Article = () => {
 
                     {/* Debut de la card */}
                     <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                        {/* Mapping pour mes articles */}
                         {articles.map((article) => (
                             <article key={article.id} className="flex max-w-xl flex-col items-start justify-between" >
                                 <div className="flex items-center gap-x-4 text-xs" >

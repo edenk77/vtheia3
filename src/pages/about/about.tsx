@@ -6,6 +6,8 @@ import BrandSponsor from "./partials/brand-sponsor"
 import Teamwork from "./partials/teamwork"
 
 
+//La page A Propos et ses éléments
+
 
 function About() {
     return (

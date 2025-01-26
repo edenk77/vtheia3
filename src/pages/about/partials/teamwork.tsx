@@ -12,6 +12,7 @@ import Img4 from '@/img/persona/aisha.jpg'
 import Img5 from '@/img/persona/ines.jpg'
 import Img6 from '@/img/persona/eden.jpg'
 
+//Tableau - Variable pour mes persona
 const people = [
     {
         name: 'Leslie Alexander',

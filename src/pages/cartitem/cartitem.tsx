@@ -11,13 +11,15 @@ import {
 import { IconBadge4k, IconCircleMinus, IconCirclePlus, IconCirclePlusFilled } from '@tabler/icons-react';
 
 
-
+// Opération utilisé pour checker et retourner les données qui vont passer dans les pages
 type Props = {
     item: CartItemType;
     addToCart: (clickedItem: CartItemType) => void;
     removeFromCart: (id: number) => void;
 };
 
+
+// J'utilise les éléments que j'ai déclarer dans la variable que je rappelle - ITEM dans CART ITEM
 const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => {
     return (
         <>

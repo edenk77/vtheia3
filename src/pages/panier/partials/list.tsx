@@ -8,26 +8,6 @@ const List: React.FC = () => {
     const { cart, removeFromCart } = useCart();
 
     return (
-        // <div className='flex'>
-        //     <div className='h-screen w-1/2'>
-        //         <img
-        //             src={Img1}
-        //             alt="Front of men's Basic Tee in black."
-        //             className="h-screen w-full object-cover object-center lg:h-full lg:w-full"
-        //         />
-        //     </div>
-        //     <div className='h-full w-1/2'>
-        //         <Card className='h-full p-12'>
-        //             <CardHeader>
-        //                 <CardDescription>Paiement reussi</CardDescription>
-        //                 <CardTitle className='text-5xl'>Merci de votre achat</CardTitle>
-        //                 <CardDescription>Nous apprécions votre commande, nous sommes en train de la traiter. Nous vous enverrons une confirmation très bientôt !</CardDescription>
-        //             </CardHeader>
-        //             <CardContent>
-        //                 <div className='mb-6'>
-        //                     <p>Tracking number</p>
-        //                     <p>51547878755545848512</p>
-        //                 </div>
 
         <div>
             <ul>
@@ -52,57 +32,6 @@ const List: React.FC = () => {
                 ))}
             </ul>
         </div>
-
-
-        //                 <Separator className="my-4" />
-        //                 <div className='flex justify-between mb-6'>
-        //                     <p>Sous total</p>
-        //                     <p>$72.00</p>
-        //                 </div>
-        //                 <div className='flex justify-between mb-6'>
-        //                     <p>Livraison</p>
-        //                     <p>$8.00</p>
-        //                 </div>
-        //                 <div className='flex justify-between mb-6'>
-        //                     <p>TVA</p>
-        //                     <p>$6.40</p>
-        //                 </div>
-        //                 <Separator className="my-4" />
-        //                 <div className='flex justify-between mb-12'>
-        //                     <p>Total</p>
-        //                     <p>$86.40</p>
-        //                 </div>
-
-        //                 <div className='flex justify-between'>
-        //                     <div>
-        //                         <p>Adresse de livraison</p>
-        //                         <p>Kristin Watson</p>
-        //                         <p>7363 Cynthia Pass</p>
-        //                         <p>Bruxelles, 1000</p>
-        //                     </div>
-        //                     <div>
-        //                         <IconBrandVisa />
-        //                         <div>
-        //                             <p>Ending with 4242</p>
-        //                             <p>Expires 12 / 24</p>
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //                 <Separator className="my-4" />
-
-
-
-        //             </CardContent>
-        //             <CardFooter>
-
-        //                 <div className='flex'>
-        //                     <Link to={'/'}>Continuer le shopping  </Link>
-        //                     <IconArrowRight />
-        //                 </div>
-        //             </CardFooter>
-        //         </Card>
-        //     </div>
-        // </div>
     )
 }
 

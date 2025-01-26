@@ -68,7 +68,6 @@ const FilterMenu = ({ filter, setFilter }: { filter: string; setFilter: (value: 
 
 
     return (
-
         <div className='w-[30%]'>
             {/* Responsive */}
             <div className='block p-6 lg:hidden xl:hidden'>
@@ -79,6 +78,7 @@ const FilterMenu = ({ filter, setFilter }: { filter: string; setFilter: (value: 
                     <SheetContent>
                         <SheetHeader>
                             <SheetTitle>Catégorie ?</SheetTitle>
+                            {/* Mapping des catégories - des prix - des types de visions */}
                             <SheetDescription>
                                 {categories.map((categorie) => (
                                     <Button

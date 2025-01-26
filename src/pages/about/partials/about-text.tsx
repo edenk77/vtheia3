@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card"
 
 
+
 const AboutText = () => {
     return (
         <div className='xl:flex md:flex xl:h-full'>

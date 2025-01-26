@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card"
 import { Button } from '@/components/ui/button';
 
-
+// Ici je rappelle ma déclaration d'items dans CARTITEM et je vais lu rajouter un bouton pour se rajouter dans le panier
 type Props = {
     item: CartItemType;
     handleAddToCart: (clickedItem: CartItemType) => void;

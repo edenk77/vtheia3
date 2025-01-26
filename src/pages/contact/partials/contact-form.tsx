@@ -29,9 +29,12 @@ import { CheckBadgeIcon } from "@heroicons/react/24/outline"
 
 const ContactForm = () => {
 
+    // Ici je declare le rendu et la réponse lors de l'envoie 
     const methods = useForm()
     const [success, setSuccess] = useState(false)
 
+
+    // JE fais une déclaration sur le bouton SUBMIT - il va me montrer dans le DOM les données que je parse et si il en voit, il affiche SUCCESS
     const onSubmit = methods.handleSubmit(data => {
         console.log(data)
         methods.reset()
@@ -39,6 +42,7 @@ const ContactForm = () => {
     })
 
 
+    // J'ai crée un fichier JS ou j'ai regroupé les données principaux que je dois avoir dans mon form - INPUT VALIDATIONS
     return (
         <div className="flex flex-col xl:flex-row lg:flex-row my-12">
             <div className='xl:w-2/5 lg:w-3/6'>

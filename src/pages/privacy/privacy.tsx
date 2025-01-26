@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 export const Privacy = () => {
     return (
-        <div className='p-12 text-justify mx-24 '>
+        <div className='p-12 text-justify xl:mx-24 '>
 
             <Button>
                 <Link to={"/"} className="">
@@ -17,7 +17,7 @@ export const Privacy = () => {
 
 
 
-            <h1 className='text-2xl font-bold text-center mb-12'>Politique de Confidentialité</h1>
+            <h1 className='text-2xl font-bold text-center my-12'>Politique de Confidentialité</h1>
 
             <p>Bienvenue chez Voytheia nous. Nous attachons une grande importance à votre vie privée et nous engageons à protéger vos informations personnelles. Cette Politique de Confidentialité décrit comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous visitez notre site web, www.voytheia.netlify.app .</p>
 

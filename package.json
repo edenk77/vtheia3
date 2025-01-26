@@ -54,6 +54,7 @@
 		"date-fns": "^3.6.0",
 		"embla-carousel-react": "^8.0.0",
 		"imagesloaded": "^5.0.0",
+		"intro.js": "^7.2.0",
 		"intro.js-react": "^1.0.0",
 		"localforage": "^1.10.0",
 		"lucide-react": "^0.279.0",

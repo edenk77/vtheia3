@@ -9,6 +9,8 @@ import Img3 from '@/img/data/montres/montrefemme/montre-parlante-femme-malvoyant
 import Img4 from '@/img/data/ordinateur/ordissimo/ordissimo1.jpeg'
 import ImageLoader from "@/components/ui/image-loader"
 
+
+
 export default function Categories() {
     return (
         <Card className="w-full">

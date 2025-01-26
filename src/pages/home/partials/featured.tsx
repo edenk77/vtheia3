@@ -1,5 +1,7 @@
 import { ArrowPathIcon, BuildingStorefrontIcon, CheckBadgeIcon, FingerPrintIcon } from '@heroicons/react/24/outline'
 
+
+// Variables pour faire un mapping
 const features = [
     {
         name: 'Un magasin accesible',

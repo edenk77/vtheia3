@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import mutedVideo from '@/img/Voytheia_Promo_VOX_2.mp4'
 
 export default function Banner() {
     return (
@@ -9,14 +10,18 @@ export default function Banner() {
                 <svg viewBox="0 0 1024 1024" className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
                     <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />
                     <defs>
-                        <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                        {/* <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
                             <stop stopColor="#7775D6" />
                             <stop offset="1" stopColor="#E935C1" />
-                        </radialGradient>
+                        </radialGradient> */}
                     </defs>
                 </svg>
                 {/* VOYTHEIA BANNER */}
                 <div className="mx-auto max-w-md xl:py-52 xl:max-w-full xl:text-center text-center  lg:flex-auto lg:py-32 lg:text-center">
+                    {/* VIDEO */}
+                    <video className="absolute top-0 left-0 h-full w-full opacity-10 object-cover " autoPlay muted loop>
+                        <source src={mutedVideo} />
+                    </video>
                     <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl uppercase">Voytheia</h2>
                     <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Le site de l'accessibilité</h2>
                     <div>

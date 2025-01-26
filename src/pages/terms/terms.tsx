@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const Terms = () => {
     return (
-        <div className='p-12 text-justify mx-24 '>
+        <div className='p-12 text-justify xl:mx-24 '>
             <Button>
                 <Link to={"/"} className="">
                     Retour page d'accueil
@@ -14,7 +14,7 @@ export const Terms = () => {
 
 
 
-            <h1 className='text-2xl font-bold text-center mb-12'>Conditions Générales d’Utilisation</h1>
+            <h1 className='text-2xl font-bold text-center my-12'>Conditions Générales d’Utilisation</h1>
             <p className='mb-6'>Bienvenue chez Voytheia ! Ces Conditions Générales d’Utilisation ("Conditions") régissent votre accès et utilisation de notre site web, www.voytheia.netlify.app , ainsi que l’achat de produits via notre plateforme. En utilisant notre Site, vous acceptez ces Conditions. Si vous n’êtes pas d’accord, veuillez cesser d’utiliser le Site.</p>
 
 

@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
+// Non utilisé
 
 
 const ResetFormAndRedirect: React.FC = () => {

@@ -264,7 +264,7 @@ const products: CartItemType[] = [
 
 
 
-//Const attribué pour le menu de droite - le panier
+//Const attribué pour le menu de droite - le panier - SHADCN
 const SHEET_SIDES = ["left"] as const
 type SheetSide = (typeof SHEET_SIDES)[number]
 
@@ -294,6 +294,7 @@ const CatalogueAll = ({ filter }: { filter: string }) => {
             return [...prev, { ...item, amount: 1 }];
         });
     };
+
     //Je crée la fonction pour enlever un produit, avec le calcul 
     const handleRemoveFromCart = (id: number) => {
         setCartItems((prev) =>

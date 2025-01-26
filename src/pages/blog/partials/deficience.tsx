@@ -57,6 +57,7 @@ const Deficience = () => {
                             </div>
                         </CardContent>
                     </Card>
+
                     <Card className='w-80 border-none shadow-none'>
                         <CardHeader>
                             <CardTitle className='text-center mb-6'>Perte de vision périphérique</CardTitle>

@@ -18,9 +18,6 @@ const Section = () => {
                     <img className="mt-4 w- lg:mt-10 rounded-lg h-auto" src={Img2} alt="office content 2" />
                 </div>
             </div>
-            <div>
-
-            </div>
         </Card>
     )
 }

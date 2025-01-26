@@ -21,7 +21,6 @@ function Stats() {
                     <CardDescription className="w-full text-white">La clarté dans la vision et la technologie adaptive pour les personnes mnalvoyantes a été notre principale projet durant ses 5 dernières années.  </CardDescription>
                 </CardHeader>
                 <CardContent className="flex flex-col xl:flex-row lg:flex-row gap-6">
-
                     <Card className="w-full xl:w-1/4 lg:w-1/4  bg-transparent shadow-none text-white">
                         <CardHeader>
                             <CardTitle>8,000+</CardTitle>
@@ -57,7 +56,7 @@ function Stats() {
 
                 </CardContent>
                 <CardFooter className="flex justify-center">
-                    <Link to={"Catalogue"} className="flex">
+                    <Link to={"Blog"} className="flex">
                         <Button variant={"ghost"}>
                             Voir plus
                         </Button>

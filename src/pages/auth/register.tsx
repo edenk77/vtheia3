@@ -1,5 +1,7 @@
 import Layout from '@/components/layout'
 
+//Page d'inscription
+
 const Register = () => {
     return (
         <Layout>

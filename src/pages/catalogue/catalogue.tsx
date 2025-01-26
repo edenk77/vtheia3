@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 function Catalogue() {
-
+    // J'ai du déclarer mon utilisation des filtres pour les mettre dans mon RETURN + déclaration du changement de  filtre
     const [filter, setFilter] = useState('all');
     const handleFilterChange = (newFilter: any) => {
         setFilter(newFilter);

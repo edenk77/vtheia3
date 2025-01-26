@@ -16,14 +16,14 @@ import image12 from "@/img/data/tablettes/ordissimo/tablette-simplifiee-ordissim
 import image13 from "@/img/data/telephonepoursenior/cl8000/cl8000-face-1.jpeg"
 
 
-
+// Opération utilisé pour checker et retourner les données qui vont passer dans les pages
 type Props = {
     cartItems: CartItemType[];
     addToCart: (clickedItem: CartItemType) => void;
     removeFromCart: (id: number) => void;
 };
 
-//Liste des produits 
+//Variable des liste des produits 
 const products = [
     {
         id: 1,
@@ -158,6 +158,7 @@ const products = [
 
 const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
 
+    // Opération pour calculer le prix total 
     const calculateTotal = (items: CartItemType[]) =>
         items.reduce((acc: number, item) => acc + item.amount * item.price, 0);
 

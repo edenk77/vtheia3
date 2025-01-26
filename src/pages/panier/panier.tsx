@@ -28,7 +28,7 @@ const Panier: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
     const calculateTotal = (items: CartItemType[]) =>
         items.reduce((acc: number, item) => acc + item.amount * item.price, 0);
 
-
+    //Me donne la petite pastille qui me met le nombre de produit
     const calculateTotalBadge = (items: CartItemType[]) =>
         items.reduce((acc: number, item) => acc + item.amount, 0);
 
